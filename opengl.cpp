@@ -7,8 +7,15 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "shader.cpp"
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
+#include "cJSON.h"
+#include "cJSON_Utils.h"
+
+#include "shader.cpp"
+#include "myhead.h"
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 

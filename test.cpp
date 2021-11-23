@@ -8,11 +8,78 @@
 
 #include "myhead.h"
 
+#include "cJSON.h"
+#include "cJSON_Utils.h"
+
+struct MmapRecord{
+    char *addr;
+    int fd;
+    struct stat sb;
+    public:
+        MmapRecord(){
+            printf("record\n");
+        };
+        template<typename Record>
+        MmapRecord(Record&&record){
+            printf("MmapRecord copy\n");
+        };
+};
+
+std::map<std::string,MmapRecord> MmapRecordMap;
+
 #define handle_error(msg) \
     do { perror(msg); exit(EXIT_FAILURE); } while (0)
 
+void mmapWithRecord(char *file){
+    MmapRecord record;
+    record.fd = open(file, O_RDONLY);
+    if (record.fd == -1)
+        handle_error("open");
+
+    if (fstat(record.fd, &(record.sb)) == -1)           /* To obtain file size */
+        handle_error("fstat");
+    record.addr = (char*)mmap(NULL, record.sb.st_size, PROT_READ,
+                MAP_PRIVATE, record.fd, 0);
+    if (record.addr == MAP_FAILED)
+        handle_error("mmap");
+    MmapRecordMap[file]=record;
+}
+void freeMmapWithRecord(char *file){
+    MmapRecord *record=&MmapRecordMap[file];
+    munmap(record->addr, record->sb.st_size);
+    close(record->fd);
+}
+
+cJSON *readjson(char *file){
+    cJSON *json;
+    mmapWithRecord(file);
+    json = cJSON_ParseWithLength(MmapRecordMap[file].addr, MmapRecordMap[file].sb.st_size);
+    freeMmapWithRecord(file);
+    return json;
+}
+int main(){
+    std::cout<<""<<std::endl;
+    char *a = "aaa";
+    char *aa ="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    std::cout<<(void *)a<<std::endl;
+    std::cout<<(void *)aa<<std::endl;
+    std::string s(a);
+    std::string ss(aa);
+    std::cout<<(void *)&s<<std::endl;
+    std::cout<<(void *)&ss<<std::endl;
+    std::map<std::string,std::string> map;
+    map[ss]=s;
+    map[s]=ss;
+    std::cout<<(void *)&map[s]<<std::endl;
+    std::cout<<(void *)&map[ss]<<std::endl;
+
+}
+
+
+
+
 int
-main(int argc, char *argv[])
+mmapexample(int argc, char *argv[])
 {
     char *addr;
     int fd;
@@ -51,8 +118,8 @@ main(int argc, char *argv[])
     } else {    /* No length arg ==> display to end of file */
         length = sb.st_size - offset;
     }
-
-    addr = mmap(NULL, length + offset - pa_offset, PROT_READ,
+    //g++指针必须强制转换
+    addr = (char*)mmap(NULL, length + offset - pa_offset, PROT_READ,
                 MAP_PRIVATE, fd, pa_offset);
     if (addr == MAP_FAILED)
         handle_error("mmap");
