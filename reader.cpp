@@ -60,17 +60,16 @@ static void freeMmapWithRecord(const char *file){
 struct Name{
     char* name;
     size_t len;
-    size_t type;
-    void* to;
 };
 
-struct Object{
-    void* pstart;
+class Object{
+    void* p;
     size_t len;
-    size_t type;
     struct Name* name;
-    struct Object* next;
     struct Object* father;
+  std::unordered_map<Name,Object> sub;
+  size_t operator -> (){
+  }
 }
 
 struct BufferCater{

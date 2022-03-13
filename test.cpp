@@ -1,6 +1,8 @@
 #include <map>
+#include <functional>
 #include <string>
 #include <iostream>
+#include <typeinfo>
 
 #include <sys/mman.h>
 #include <sys/stat.h>
@@ -8,133 +10,82 @@
 
 #include "myhead.h"
 
-#include "cJSON.h"
-#include "cJSON_Utils.h"
+using namespace std;
 
-struct MmapRecord{
-    char *addr;
-    int fd;
-    struct stat sb;
+template <typename T>
+class Singleton{
     public:
-        MmapRecord(){
-            printf("record\n");
-        };
-        template<typename Record>
-        MmapRecord(Record&&record){
-            printf("MmapRecord copy\n");
-        };
+    static T& getInstance(){
+        static T instance;
+        return instance;
+    }
 };
 
-std::map<std::string,MmapRecord> MmapRecordMap;
+template <typename T,T v>
+struct aaa{
+    static constexpr T value=v;
+    typedef T value_type;
+    typedef aaa<T,v> type;
+    constexpr value_type operator()() const noexcept {return 1;}
+    //类型转换函数
+    constexpr operator value_type() const noexcept {return 2;}
+};
 
-#define handle_error(msg) \
-    do { perror(msg); exit(EXIT_FAILURE); } while (0)
+#define printcharp(x)     do{char *p=(char *)(&x);std::cout<< p <<std::endl;}while(0); 
+#define printp(x)     do{std::cout<< &x <<std::endl;}while(0); 
 
-void mmapWithRecord(char *file){
-    MmapRecord record;
-    record.fd = open(file, O_RDONLY);
-    if (record.fd == -1)
-        handle_error("open");
+class Test{
+    public:
+    template<class T>
+    Test(T&& t){
+        std::cout<< "Test:"<<typeid(t).name() <<std::endl;
+        printTest();
+    }
+    Test(){
+        std::cout<< "Test:()" <<std::endl;
+        printTest();
+    }
+    template<class T>
+    Test operator=(T&& t){
+        std::cout<< "operator=:"<<typeid(t).name() <<std::endl;
+        printTest();
+        return t;
+    }
 
-    if (fstat(record.fd, &(record.sb)) == -1)           /* To obtain file size */
-        handle_error("fstat");
-    record.addr = (char*)mmap(NULL, record.sb.st_size, PROT_READ,
-                MAP_PRIVATE, record.fd, 0);
-    if (record.addr == MAP_FAILED)
-        handle_error("mmap");
-    MmapRecordMap[file]=record;
+    void printTest(){
+        std::cout<< this << "string.data():"<<(void *)s.data()<<std::endl;
+    }
+
+    int i=233;
+    string s="aaaaaaaaaaaaaaaaaaaaaaaaaaa";
+};
+
+//需要显性的将size_t转char*,char*会直接输出字符串
+Test returnTest(){
+    string b="bbbbbbbbbbbbbbbbbbb";
+    Test a="aaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    // std::cout<< &a <<std::endl;//调用两次,&b位置不变,&a位置改变并作为返回值,并继续增长
+    return a;
 }
-void freeMmapWithRecord(char *file){
-    MmapRecord *record=&MmapRecordMap[file];
-    munmap(record->addr, record->sb.st_size);
-    close(record->fd);
-}
 
-cJSON *readjson(char *file){
-    cJSON *json;
-    mmapWithRecord(file);
-    json = cJSON_ParseWithLength(MmapRecordMap[file].addr, MmapRecordMap[file].sb.st_size);
-    freeMmapWithRecord(file);
-    return json;
-}
+
+
 int main(){
-    std::cout<<""<<std::endl;
-    char *a = "aaa";
-    char *aa ="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-    std::cout<<(void *)a<<std::endl;
-    std::cout<<(void *)aa<<std::endl;
-    std::string s(a);
-    std::string ss(aa);
-    std::cout<<(void *)&s<<std::endl;
-    std::cout<<(void *)&ss<<std::endl;
-    std::map<std::string,std::string> map;
-    map[ss]=s;
-    map[s]=ss;
-    std::cout<<(void *)&map[s]<<std::endl;
-    std::cout<<(void *)&map[ss]<<std::endl;
-
-}
-
-
-
-
-int
-mmapexample(int argc, char *argv[])
-{
-    char *addr;
-    int fd;
-    struct stat sb;
-    off_t offset, pa_offset;
-    size_t length;
-    ssize_t s;
-
-    if (argc < 3 || argc > 4) {
-        fprintf(stderr, "%s file offset [length]\n", argv[0]);
-        exit(EXIT_FAILURE);
-    }
-
-    fd = open(argv[1], O_RDONLY);
-    if (fd == -1)
-        handle_error("open");
-
-    if (fstat(fd, &sb) == -1)           /* To obtain file size */
-        handle_error("fstat");
-
-    offset = atoi(argv[2]);
-    pa_offset = offset & ~(sysconf(_SC_PAGE_SIZE) - 1);
-        /* offset for mmap() must be page aligned */
-
-    if (offset >= sb.st_size) {
-        fprintf(stderr, "offset is past end of file\n");
-        exit(EXIT_FAILURE);
-    }
-
-    if (argc == 4) {
-        length = atoi(argv[3]);
-        if (offset + length > sb.st_size)
-            length = sb.st_size - offset;
-                /* Can't display bytes past end of file */
-
-    } else {    /* No length arg ==> display to end of file */
-        length = sb.st_size - offset;
-    }
-    //g++指针必须强制转换
-    addr = (char*)mmap(NULL, length + offset - pa_offset, PROT_READ,
-                MAP_PRIVATE, fd, pa_offset);
-    if (addr == MAP_FAILED)
-        handle_error("mmap");
-
-    s = write(STDOUT_FILENO, addr + offset - pa_offset, length);
-    if (s != length) {
-        if (s == -1)
-            handle_error("write");
-
-        fprintf(stderr, "partial write");
-        exit(EXIT_FAILURE);
-    }
-
-    munmap(addr, length + offset - pa_offset);
-    close(fd);
-
-    exit(EXIT_SUCCESS);
+    // map<string,function<FactoryBase*(...)>> factory;
+    Test a1=returnTest();//函数返回值没有开销,c++11已经优化了,左值会调用构造函数
+    auto&& a2(returnTest());//复制构造也可以引用
+    // a1=returnTest()+"1";//此处&a1不变,数据改变
+    Test aaaaaaaaa=Test();
+    aaaaaaaaa=Test();//这句不调用=(),算构造,只是同名
+    std::cout<< (int)aaa<long,44>() <<std::endl;
+    Test bbbbbbbbb;
+    std::cout<< sizeof(aaa<int,44>()) <<std::endl;
+    bbbbbbbbb=aaaaaaaaa;//=()参数引用,返回值非引用,返回引用构造临时变量,有一次复制
+    std::cout<< typeid(aaa<long,44>::value_type).name() <<std::endl;
+    std::cout<< (aaa<int,44>()()) <<std::endl;
+    std::cout<< typeid(long).name() <<std::endl;
+    std::cout<< typeid(55).name() <<std::endl;
+    std::cout<< typeid(std::cout).name() <<std::endl;
+    std::cout<< typeid(std::string).name() <<std::endl;
+    std::cout<< typeid(Test).name() <<std::endl;
 }
