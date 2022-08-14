@@ -28,15 +28,17 @@ rmonebyone(){
 	fi
 	done
 }
-ls1(){
-	for name in `ls $1` ; do echo ${1}/${name}; ls -a ${1}/${name}; done
+l1(){
+	for name in `l $1`; do if [[ -d ${1}${name} ]]; then  echo ${1}${name}; l ${1}${name};read; fi; done
 }
+# find $1 -maxdepth 1 |xargs ls -ld
+# l |xargs ls
 treefile(){
-	find . -print 2>/dev/null|awk '!/\.$/ {for (i=1;i<NF;i++){d=length($i);if ( d < 5 && i != 1 )d=5;printf("%"d"s","|")}
+	find $1 -maxdepth $2 -print 2>/dev/null|awk '!/\.$/ {for (i=1;i<NF;i++){d=length($i);if ( d < 5 && i != 1 )d=5;printf("%"d"s","|")}
 print "---"$NF}' FS='/'
 }
 treedir(){
-	find . -type d -print 2>/dev/null|awk '!/\.$/ {for (i=1;i<NF;i++){d=length($i);if ( d < 5 && i != 1 )d=5;
+	find $1 -maxdepth $2 -type d -print 2>/dev/null|awk '!/\.$/ {for (i=1;i<NF;i++){d=length($i);if ( d < 5 && i != 1 )d=5;
 printf("%"d"s","|")}print "---"$NF}' FS='/'
 }
 #dd
