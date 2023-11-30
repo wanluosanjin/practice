@@ -1,0 +1,4 @@
+
+[void][system.Reflection.Assembly]::LoadFrom("C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll")
+ls |%{$_.GetDirectories()} |%{$_.ToString().Split(' ')[0]}
+    经过通道后会扁平化处理

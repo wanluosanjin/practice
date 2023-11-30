@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://6lwg8fxymc7w"
+
+[deps]
+
+files=["res://myscrapy/img.bookurl.translation", "res://myscrapy/img.description.translation", "res://myscrapy/img.image.translation", "res://myscrapy/img.image.translation", "res://myscrapy/img.image.translation"]
+
+source_file="res://myscrapy/img.csv"
+dest_files=["res://myscrapy/img.bookurl.translation", "res://myscrapy/img.description.translation", "res://myscrapy/img.image.translation", "res://myscrapy/img.image.translation", "res://myscrapy/img.image.translation"]
+
+[params]
+
+compress=true
+delimiter=0

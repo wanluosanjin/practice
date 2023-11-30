@@ -1,0 +1,11 @@
+dirtool
+	move_dir 移动,目录相同不移动,目标文件已存在不移动
+	get_parentdir 父目录
+	get_selfname 路径最后的文件名
+	getsubdir 子目录路径!!!
+	get_fileformat "."后的字符串
+	replace_char 替换字符串某个字符
+deal_singledir
+	find_singledir 将单一文件文件夹的文件返回至父目录,如果子目录名与父目录名重叠,则将全部子文件转移
+	find_emptydir 空文件夹转移至d盘
+	removeallzipdir 遍历移除所有以.zip结尾的文件夹

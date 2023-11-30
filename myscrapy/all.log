@@ -1,0 +1,1543 @@
+2020-12-09 23:09:35 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: myscrapy)
+2020-12-09 23:09:35 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.18362-SP0
+2020-12-09 23:09:35 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'myscrapy', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'DOWNLOAD_DELAY': 5, 'LOG_FILE': 'all.log', 'NEWSPIDER_MODULE': 'myscrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['myscrapy.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.64'}
+2020-12-09 23:09:35 [scrapy.extensions.telnet] INFO: Telnet Password: e54cfd8b8cbd2511
+2020-12-09 23:09:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-12-09 23:09:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-12-09 23:09:36 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-12-09 23:09:36 [scrapy.middleware] INFO: Enabled item pipelines:
+['myscrapy.pipelines.MyImagesPipeline', 'myscrapy.pipelines.MyscrapyPipeline']
+2020-12-09 23:09:36 [scrapy.core.engine] INFO: Spider opened
+2020-12-09 23:09:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-12-09 23:09:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-12-09 23:09:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/robots.txt> (referer: None)
+2020-12-09 23:09:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/categories/711> (referer: None)
+2020-12-09 23:09:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:09:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/robots.txt> (referer: None)
+2020-12-09 23:09:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=10> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/f2/a1/f2a173669c3e471ae66384a47e21cc7f.jpg> (referer: https://www.thedoujin.com/images/f2/a1/f2a173669c3e471ae66384a47e21cc7f.jpg)
+2020-12-09 23:10:00 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/f2/a1/f2a173669c3e471ae66384a47e21cc7f.jpg> referred in <https://www.thedoujin.com/images/f2/a1/f2a173669c3e471ae66384a47e21cc7f.jpg>
+2020-12-09 23:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\1.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/f2/a1/f2a173669c3e471ae66384a47e21cc7f.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\1'}
+2020-12-09 23:10:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=9> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=8> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/62/b7/62b782dc228d6984b34233d0713fbc3f.jpg> (referer: https://www.thedoujin.com/images/62/b7/62b782dc228d6984b34233d0713fbc3f.jpg)
+2020-12-09 23:10:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/62/b7/62b782dc228d6984b34233d0713fbc3f.jpg> referred in <https://www.thedoujin.com/images/62/b7/62b782dc228d6984b34233d0713fbc3f.jpg>
+2020-12-09 23:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=10>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\10.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/62/b7/62b782dc228d6984b34233d0713fbc3f.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\10'}
+2020-12-09 23:10:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/e2/67/e267a95f70734ef8f39ab72e6d738505.jpg> (referer: https://www.thedoujin.com/images/e2/67/e267a95f70734ef8f39ab72e6d738505.jpg)
+2020-12-09 23:10:14 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/e2/67/e267a95f70734ef8f39ab72e6d738505.jpg> referred in <https://www.thedoujin.com/images/e2/67/e267a95f70734ef8f39ab72e6d738505.jpg>
+2020-12-09 23:10:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=9>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\9.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/e2/67/e267a95f70734ef8f39ab72e6d738505.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\9'}
+2020-12-09 23:10:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=7> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/a1/8f/a18febfea0daf76deab3129949ef95dc.jpg> (referer: https://www.thedoujin.com/images/a1/8f/a18febfea0daf76deab3129949ef95dc.jpg)
+2020-12-09 23:10:19 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/a1/8f/a18febfea0daf76deab3129949ef95dc.jpg> referred in <https://www.thedoujin.com/images/a1/8f/a18febfea0daf76deab3129949ef95dc.jpg>
+2020-12-09 23:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=8>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\8.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/a1/8f/a18febfea0daf76deab3129949ef95dc.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\8'}
+2020-12-09 23:10:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=6> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/8f/d0/8fd01744c961268aec795a5b84e5eb0b.jpg> (referer: https://www.thedoujin.com/images/8f/d0/8fd01744c961268aec795a5b84e5eb0b.jpg)
+2020-12-09 23:10:25 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/8f/d0/8fd01744c961268aec795a5b84e5eb0b.jpg> referred in <https://www.thedoujin.com/images/8f/d0/8fd01744c961268aec795a5b84e5eb0b.jpg>
+2020-12-09 23:10:25 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=7>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\7.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/8f/d0/8fd01744c961268aec795a5b84e5eb0b.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\7'}
+2020-12-09 23:10:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=5> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/b5/1f/b51f86739c7c28c8db1ee6c340489b8a.jpg> (referer: https://www.thedoujin.com/images/b5/1f/b51f86739c7c28c8db1ee6c340489b8a.jpg)
+2020-12-09 23:10:33 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/b5/1f/b51f86739c7c28c8db1ee6c340489b8a.jpg> referred in <https://www.thedoujin.com/images/b5/1f/b51f86739c7c28c8db1ee6c340489b8a.jpg>
+2020-12-09 23:10:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=6>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\6.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/b5/1f/b51f86739c7c28c8db1ee6c340489b8a.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\6'}
+2020-12-09 23:10:47 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 16 pages/min), scraped 6 items (at 6 items/min)
+2020-12-09 23:10:48 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-12-09 23:10:48 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+BrokenPipeError: [Errno 32] Broken pipe
+2020-12-09 23:10:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=4> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=3> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/46/41/4641186e89276f7fd37048404bbee6f3.jpg> (referer: https://www.thedoujin.com/images/46/41/4641186e89276f7fd37048404bbee6f3.jpg)
+2020-12-09 23:10:49 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/46/41/4641186e89276f7fd37048404bbee6f3.jpg> referred in <https://www.thedoujin.com/images/46/41/4641186e89276f7fd37048404bbee6f3.jpg>
+2020-12-09 23:10:49 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=5>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\5.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/46/41/4641186e89276f7fd37048404bbee6f3.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\5'}
+2020-12-09 23:10:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=2> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:10:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/3a/7f/3a7f02083809d66b5aa14c5c66365c09.jpg> (referer: https://www.thedoujin.com/images/3a/7f/3a7f02083809d66b5aa14c5c66365c09.jpg)
+2020-12-09 23:10:55 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/3a/7f/3a7f02083809d66b5aa14c5c66365c09.jpg> referred in <https://www.thedoujin.com/images/3a/7f/3a7f02083809d66b5aa14c5c66365c09.jpg>
+2020-12-09 23:10:55 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=4>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\4.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/3a/7f/3a7f02083809d66b5aa14c5c66365c09.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\4'}
+2020-12-09 23:11:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/49/96/499603de5b6a24733cc848d420131388.jpg> (referer: https://www.thedoujin.com/images/49/96/499603de5b6a24733cc848d420131388.jpg)
+2020-12-09 23:11:01 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/49/96/499603de5b6a24733cc848d420131388.jpg> referred in <https://www.thedoujin.com/images/49/96/499603de5b6a24733cc848d420131388.jpg>
+2020-12-09 23:11:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=3>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\3.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/49/96/499603de5b6a24733cc848d420131388.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\3'}
+2020-12-09 23:11:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=14> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:11:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/12/80/12808eb65e36f44b83ab942fd9927156.jpg> (referer: https://www.thedoujin.com/images/12/80/12808eb65e36f44b83ab942fd9927156.jpg)
+2020-12-09 23:11:09 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/12/80/12808eb65e36f44b83ab942fd9927156.jpg> referred in <https://www.thedoujin.com/images/12/80/12808eb65e36f44b83ab942fd9927156.jpg>
+2020-12-09 23:11:10 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=2>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\2.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/12/80/12808eb65e36f44b83ab942fd9927156.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\2'}
+2020-12-09 23:11:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=13> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:11:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=12> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:11:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/99/81/9981c937e6b70603d71bfe2691b47ebf.jpg> (referer: https://www.thedoujin.com/images/99/81/9981c937e6b70603d71bfe2691b47ebf.jpg)
+2020-12-09 23:11:16 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/99/81/9981c937e6b70603d71bfe2691b47ebf.jpg> referred in <https://www.thedoujin.com/images/99/81/9981c937e6b70603d71bfe2691b47ebf.jpg>
+2020-12-09 23:11:16 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=14>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\14.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/99/81/9981c937e6b70603d71bfe2691b47ebf.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\14'}
+2020-12-09 23:11:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=11> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:11:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/92/25/922587f56cfe03bc363f9f2f978f39cb.jpg> (referer: https://www.thedoujin.com/images/92/25/922587f56cfe03bc363f9f2f978f39cb.jpg)
+2020-12-09 23:11:23 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/92/25/922587f56cfe03bc363f9f2f978f39cb.jpg> referred in <https://www.thedoujin.com/images/92/25/922587f56cfe03bc363f9f2f978f39cb.jpg>
+2020-12-09 23:11:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=13>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\13.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/92/25/922587f56cfe03bc363f9f2f978f39cb.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\13'}
+2020-12-09 23:11:23 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-12-09 23:11:23 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2020-12-09 23:11:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=16> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:11:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=15> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:11:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/d1/85/d185832b0e708e0987c250952faaca45.jpg> (referer: https://www.thedoujin.com/images/d1/85/d185832b0e708e0987c250952faaca45.jpg)
+2020-12-09 23:11:31 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/d1/85/d185832b0e708e0987c250952faaca45.jpg> referred in <https://www.thedoujin.com/images/d1/85/d185832b0e708e0987c250952faaca45.jpg>
+2020-12-09 23:11:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=12>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\12.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/d1/85/d185832b0e708e0987c250952faaca45.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\12'}
+2020-12-09 23:11:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/8d/7f/8d7f0bf54981ee082c096e5d2077d299.jpg> (referer: https://www.thedoujin.com/images/8d/7f/8d7f0bf54981ee082c096e5d2077d299.jpg)
+2020-12-09 23:11:36 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/8d/7f/8d7f0bf54981ee082c096e5d2077d299.jpg> referred in <https://www.thedoujin.com/images/8d/7f/8d7f0bf54981ee082c096e5d2077d299.jpg>
+2020-12-09 23:11:36 [scrapy.extensions.logstats] INFO: Crawled 33 pages (at 17 pages/min), scraped 13 items (at 7 items/min)
+2020-12-09 23:11:37 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=11>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\11.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/8d/7f/8d7f0bf54981ee082c096e5d2077d299.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\11'}
+2020-12-09 23:11:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/b0/48/b04804d4c8663e884681c1ce84a77159.jpg> (referer: https://www.thedoujin.com/images/b0/48/b04804d4c8663e884681c1ce84a77159.jpg)
+2020-12-09 23:11:43 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/b0/48/b04804d4c8663e884681c1ce84a77159.jpg> referred in <https://www.thedoujin.com/images/b0/48/b04804d4c8663e884681c1ce84a77159.jpg>
+2020-12-09 23:11:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=16>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\16.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/b0/48/b04804d4c8663e884681c1ce84a77159.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\16'}
+2020-12-09 23:11:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/5f/55/5f550b40024fa60d688dba9183581cb0.jpg> (referer: https://www.thedoujin.com/images/5f/55/5f550b40024fa60d688dba9183581cb0.jpg)
+2020-12-09 23:11:47 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/5f/55/5f550b40024fa60d688dba9183581cb0.jpg> referred in <https://www.thedoujin.com/images/5f/55/5f550b40024fa60d688dba9183581cb0.jpg>
+2020-12-09 23:11:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=15>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\15.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/5f/55/5f550b40024fa60d688dba9183581cb0.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\15'}
+2020-12-09 23:12:36 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 2 pages/min), scraped 16 items (at 3 items/min)
+2020-12-09 23:13:36 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 0 pages/min), scraped 16 items (at 0 items/min)
+2020-12-09 23:14:36 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://thedoujin.com/index.php/pages/711?Pages_page=204> (failed 1 times): User timeout caused connection failure: Getting http://thedoujin.com/index.php/pages/711?Pages_page=204 took longer than 180.0 seconds..
+2020-12-09 23:14:36 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 0 pages/min), scraped 16 items (at 0 items/min)
+2020-12-09 23:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=203> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:14:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/85/c2/85c21202d8d497101af7e569eaed0bc1.jpg> (referer: https://www.thedoujin.com/images/85/c2/85c21202d8d497101af7e569eaed0bc1.jpg)
+2020-12-09 23:14:39 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/85/c2/85c21202d8d497101af7e569eaed0bc1.jpg> referred in <https://www.thedoujin.com/images/85/c2/85c21202d8d497101af7e569eaed0bc1.jpg>
+2020-12-09 23:14:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=203>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\203.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/85/c2/85c21202d8d497101af7e569eaed0bc1.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\203'}
+2020-12-09 23:15:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=202> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:15:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/e8/93/e89361172c51c36bb8a40dcdc61b1683.jpg> (referer: https://www.thedoujin.com/images/e8/93/e89361172c51c36bb8a40dcdc61b1683.jpg)
+2020-12-09 23:15:15 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/e8/93/e89361172c51c36bb8a40dcdc61b1683.jpg> referred in <https://www.thedoujin.com/images/e8/93/e89361172c51c36bb8a40dcdc61b1683.jpg>
+2020-12-09 23:15:15 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=202>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\202.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/e8/93/e89361172c51c36bb8a40dcdc61b1683.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\202'}
+2020-12-09 23:15:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-12-09 23:15:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2020-12-09 23:15:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://thedoujin.com/index.php/pages/711?Pages_page=201> (referer: http://thedoujin.com/index.php/categories/711)
+2020-12-09 23:15:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thedoujin.com/images/8e/99/8e996c8dd1392ff4b391091dee1b8e80.jpg> (referer: https://www.thedoujin.com/images/8e/99/8e996c8dd1392ff4b391091dee1b8e80.jpg)
+2020-12-09 23:15:19 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://www.thedoujin.com/images/8e/99/8e996c8dd1392ff4b391091dee1b8e80.jpg> referred in <https://www.thedoujin.com/images/8e/99/8e996c8dd1392ff4b391091dee1b8e80.jpg>
+2020-12-09 23:15:19 [scrapy.core.scraper] DEBUG: Scraped from <200 http://thedoujin.com/index.php/pages/711?Pages_page=201>
+{'cookie': 1,
+ 'image_paths': ['bookfull\\[]\\711 N%A\\201.jpg'],
+ 'image_urls': ['https://www.thedoujin.com/images/8e/99/8e996c8dd1392ff4b391091dee1b8e80.jpg'],
+ 'imgpath': 'bookfull\\[]\\711 N%A\\201'}
+2021-01-06 15:46:41 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: myscrapy)
+2021-01-06 15:46:41 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.19041-SP0
+2021-01-06 15:46:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'myscrapy', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'DOWNLOAD_DELAY': 5, 'LOG_FILE': 'all.log', 'NEWSPIDER_MODULE': 'myscrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['myscrapy.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.64'}
+2021-01-06 15:46:41 [scrapy.extensions.telnet] INFO: Telnet Password: a24bb2718928ef4c
+2021-01-06 15:46:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-01-06 15:46:42 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-01-06 15:46:42 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-01-06 15:46:42 [scrapy.middleware] INFO: Enabled item pipelines:
+['myscrapy.pipelines.MyImagesPipeline', 'myscrapy.pipelines.MyscrapyPipeline']
+2021-01-06 15:46:42 [scrapy.core.engine] INFO: Spider opened
+2021-01-06 15:46:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-01-06 15:46:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-01-06 15:46:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://thedoujin.com/robots.txt> from <GET http://thedoujin.com/robots.txt>
+2021-01-06 15:46:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thedoujin.com/robots.txt> (referer: None)
+2021-01-06 15:46:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://thedoujin.com/index.php/categories/598> from <GET http://thedoujin.com/index.php/categories/598>
+2021-01-06 15:47:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thedoujin.com/index.php/categories/598> (referer: None)
+2021-01-06 15:47:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/robots.txt> (referer: None)
+2021-01-06 15:47:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/df/18/thumbnail_df1885202819cbdb92b014ee07ca9de7.jpg> (referer: None)
+2021-01-06 15:47:08 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/df/18/thumbnail_df1885202819cbdb92b014ee07ca9de7.jpg> referred in <None>
+2021-01-06 15:47:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\1.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/df/18/thumbnail_df1885202819cbdb92b014ee07ca9de7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\1'}
+2021-01-06 15:47:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/00/6a/thumbnail_006ad0a517558b3fddabb4dc7bf8bc53.jpg> (referer: None)
+2021-01-06 15:47:14 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/00/6a/thumbnail_006ad0a517558b3fddabb4dc7bf8bc53.jpg> referred in <None>
+2021-01-06 15:47:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\2.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/00/6a/thumbnail_006ad0a517558b3fddabb4dc7bf8bc53.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\2'}
+2021-01-06 15:47:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/06/78/thumbnail_06786973c59701d30578f096c5b033e5.jpg> (referer: None)
+2021-01-06 15:47:22 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/06/78/thumbnail_06786973c59701d30578f096c5b033e5.jpg> referred in <None>
+2021-01-06 15:47:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\3.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/06/78/thumbnail_06786973c59701d30578f096c5b033e5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\3'}
+2021-01-06 15:47:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/57/34/thumbnail_5734f2fc1f1c7acba5f03c5a59c56fa5.jpg> (referer: None)
+2021-01-06 15:47:28 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/57/34/thumbnail_5734f2fc1f1c7acba5f03c5a59c56fa5.jpg> referred in <None>
+2021-01-06 15:47:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\4.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/57/34/thumbnail_5734f2fc1f1c7acba5f03c5a59c56fa5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\4'}
+2021-01-06 15:47:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/0e/45/thumbnail_0e4509bcb638573ab35dfe6f377d5509.jpg> (referer: None)
+2021-01-06 15:47:36 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/0e/45/thumbnail_0e4509bcb638573ab35dfe6f377d5509.jpg> referred in <None>
+2021-01-06 15:47:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\5.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/0e/45/thumbnail_0e4509bcb638573ab35dfe6f377d5509.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\5'}
+2021-01-06 15:47:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ab/60/thumbnail_ab6069a317cf99f210b0e1dc878b96a1.jpg> (referer: None)
+2021-01-06 15:47:41 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ab/60/thumbnail_ab6069a317cf99f210b0e1dc878b96a1.jpg> referred in <None>
+2021-01-06 15:47:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\6.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ab/60/thumbnail_ab6069a317cf99f210b0e1dc878b96a1.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\6'}
+2021-01-06 15:47:42 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:47:42 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+BrokenPipeError: [Errno 32] Broken pipe
+2021-01-06 15:47:42 [scrapy.extensions.logstats] INFO: Crawled 9 pages (at 9 pages/min), scraped 6 items (at 6 items/min)
+2021-01-06 15:47:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/84/67/thumbnail_84671a05a0f796cde917817a5822797a.jpg> (referer: None)
+2021-01-06 15:47:50 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/84/67/thumbnail_84671a05a0f796cde917817a5822797a.jpg> referred in <None>
+2021-01-06 15:47:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\7.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/84/67/thumbnail_84671a05a0f796cde917817a5822797a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\7'}
+2021-01-06 15:47:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/93/18/thumbnail_9318535ebfdc375474e6c4a5035f5d57.jpg> (referer: None)
+2021-01-06 15:47:53 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/93/18/thumbnail_9318535ebfdc375474e6c4a5035f5d57.jpg> referred in <None>
+2021-01-06 15:47:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\8.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/93/18/thumbnail_9318535ebfdc375474e6c4a5035f5d57.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\8'}
+2021-01-06 15:48:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/1a/e5/thumbnail_1ae5a3aa11cb0cde5ec78ef9b370a9fd.jpg> (referer: None)
+2021-01-06 15:48:02 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/1a/e5/thumbnail_1ae5a3aa11cb0cde5ec78ef9b370a9fd.jpg> referred in <None>
+2021-01-06 15:48:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\9.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/1a/e5/thumbnail_1ae5a3aa11cb0cde5ec78ef9b370a9fd.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\9'}
+2021-01-06 15:48:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/97/7c/thumbnail_977c1f23d9ece8f83c1d520aa1bccb4c.jpg> (referer: None)
+2021-01-06 15:48:08 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/97/7c/thumbnail_977c1f23d9ece8f83c1d520aa1bccb4c.jpg> referred in <None>
+2021-01-06 15:48:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\10.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/97/7c/thumbnail_977c1f23d9ece8f83c1d520aa1bccb4c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\10'}
+2021-01-06 15:48:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/29/7e/thumbnail_297e47aa21fb2d64e79fc4393b416177.jpg> (referer: None)
+2021-01-06 15:48:13 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/29/7e/thumbnail_297e47aa21fb2d64e79fc4393b416177.jpg> referred in <None>
+2021-01-06 15:48:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\11.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/29/7e/thumbnail_297e47aa21fb2d64e79fc4393b416177.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\11'}
+2021-01-06 15:48:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ee/cf/thumbnail_eecfc7dabdefec6508ce94b7f5585c1c.jpg> (referer: None)
+2021-01-06 15:48:17 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ee/cf/thumbnail_eecfc7dabdefec6508ce94b7f5585c1c.jpg> referred in <None>
+2021-01-06 15:48:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\12.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ee/cf/thumbnail_eecfc7dabdefec6508ce94b7f5585c1c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\12'}
+2021-01-06 15:48:17 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:48:17 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:48:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/60/80/thumbnail_6080c5833958d421873eb53366f8118c.jpg> (referer: None)
+2021-01-06 15:48:24 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/60/80/thumbnail_6080c5833958d421873eb53366f8118c.jpg> referred in <None>
+2021-01-06 15:48:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\13.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/60/80/thumbnail_6080c5833958d421873eb53366f8118c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\13'}
+2021-01-06 15:48:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b1/9b/thumbnail_b19beefae5ad9c69335e01cf225c392f.jpg> (referer: None)
+2021-01-06 15:48:31 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b1/9b/thumbnail_b19beefae5ad9c69335e01cf225c392f.jpg> referred in <None>
+2021-01-06 15:48:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\14.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b1/9b/thumbnail_b19beefae5ad9c69335e01cf225c392f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\14'}
+2021-01-06 15:48:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ec/5b/thumbnail_ec5b98ee90bacefa40e3f6af3e3b42e7.jpg> (referer: None)
+2021-01-06 15:48:38 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ec/5b/thumbnail_ec5b98ee90bacefa40e3f6af3e3b42e7.jpg> referred in <None>
+2021-01-06 15:48:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\15.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ec/5b/thumbnail_ec5b98ee90bacefa40e3f6af3e3b42e7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\15'}
+2021-01-06 15:48:42 [scrapy.extensions.logstats] INFO: Crawled 18 pages (at 9 pages/min), scraped 15 items (at 9 items/min)
+2021-01-06 15:48:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/30/d8/thumbnail_30d8c06e476bed0e985ea3c60c5d5690.jpg> (referer: None)
+2021-01-06 15:48:44 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/30/d8/thumbnail_30d8c06e476bed0e985ea3c60c5d5690.jpg> referred in <None>
+2021-01-06 15:48:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\16.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/30/d8/thumbnail_30d8c06e476bed0e985ea3c60c5d5690.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\16'}
+2021-01-06 15:48:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/e8/36/thumbnail_e836c352aa19aaf79f3555a2afd070b1.jpg> (referer: None)
+2021-01-06 15:48:51 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/e8/36/thumbnail_e836c352aa19aaf79f3555a2afd070b1.jpg> referred in <None>
+2021-01-06 15:48:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\17.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/e8/36/thumbnail_e836c352aa19aaf79f3555a2afd070b1.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\17'}
+2021-01-06 15:48:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7e/51/thumbnail_7e51ad51d4c6fba72b65d30f320b4887.jpg> (referer: None)
+2021-01-06 15:48:55 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7e/51/thumbnail_7e51ad51d4c6fba72b65d30f320b4887.jpg> referred in <None>
+2021-01-06 15:48:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\18.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7e/51/thumbnail_7e51ad51d4c6fba72b65d30f320b4887.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\18'}
+2021-01-06 15:48:56 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:48:56 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/db/99/thumbnail_db997f2f105785ae3f35a17b44734e1a.jpg> (referer: None)
+2021-01-06 15:49:02 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/db/99/thumbnail_db997f2f105785ae3f35a17b44734e1a.jpg> referred in <None>
+2021-01-06 15:49:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\19.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/db/99/thumbnail_db997f2f105785ae3f35a17b44734e1a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\19'}
+2021-01-06 15:49:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/4a/c5/thumbnail_4ac5b55ed20f5381a6c9667800e7d684.jpg> (referer: None)
+2021-01-06 15:49:08 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/4a/c5/thumbnail_4ac5b55ed20f5381a6c9667800e7d684.jpg> referred in <None>
+2021-01-06 15:49:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\20.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/4a/c5/thumbnail_4ac5b55ed20f5381a6c9667800e7d684.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\20'}
+2021-01-06 15:49:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/62/b7/thumbnail_62b72e53478bd88b6401309232c2a031.jpg> (referer: None)
+2021-01-06 15:49:13 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/62/b7/thumbnail_62b72e53478bd88b6401309232c2a031.jpg> referred in <None>
+2021-01-06 15:49:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\21.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/62/b7/thumbnail_62b72e53478bd88b6401309232c2a031.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\21'}
+2021-01-06 15:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b5/0f/thumbnail_b50f9418b6b85ad6f6b7311265718445.jpg> (referer: None)
+2021-01-06 15:49:20 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b5/0f/thumbnail_b50f9418b6b85ad6f6b7311265718445.jpg> referred in <None>
+2021-01-06 15:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\22.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b5/0f/thumbnail_b50f9418b6b85ad6f6b7311265718445.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\22'}
+2021-01-06 15:49:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/cc/2c/thumbnail_cc2c5a289a3ead92268134f3773fc9ad.jpg> (referer: None)
+2021-01-06 15:49:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/cc/2c/thumbnail_cc2c5a289a3ead92268134f3773fc9ad.jpg> referred in <None>
+2021-01-06 15:49:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\23.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/cc/2c/thumbnail_cc2c5a289a3ead92268134f3773fc9ad.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\23'}
+2021-01-06 15:49:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/3d/2d/thumbnail_3d2ddcff6127c1c8206368285bb3df32.jpg> (referer: None)
+2021-01-06 15:49:34 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/3d/2d/thumbnail_3d2ddcff6127c1c8206368285bb3df32.jpg> referred in <None>
+2021-01-06 15:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\24.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/3d/2d/thumbnail_3d2ddcff6127c1c8206368285bb3df32.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\24'}
+2021-01-06 15:49:34 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:49:34 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:49:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/2e/c6/thumbnail_2ec64ddba8bbd335ff728f8395e0061a.jpg> (referer: None)
+2021-01-06 15:49:40 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/2e/c6/thumbnail_2ec64ddba8bbd335ff728f8395e0061a.jpg> referred in <None>
+2021-01-06 15:49:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\25.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/2e/c6/thumbnail_2ec64ddba8bbd335ff728f8395e0061a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\25'}
+2021-01-06 15:49:42 [scrapy.extensions.logstats] INFO: Crawled 28 pages (at 10 pages/min), scraped 25 items (at 10 items/min)
+2021-01-06 15:49:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b3/b0/thumbnail_b3b0f202db2c96811bcfac4174822890.jpg> (referer: None)
+2021-01-06 15:49:47 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b3/b0/thumbnail_b3b0f202db2c96811bcfac4174822890.jpg> referred in <None>
+2021-01-06 15:49:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\26.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b3/b0/thumbnail_b3b0f202db2c96811bcfac4174822890.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\26'}
+2021-01-06 15:49:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/af/d0/thumbnail_afd0ac3d7be389760af9eb780d8bb80f.jpg> (referer: None)
+2021-01-06 15:49:53 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/af/d0/thumbnail_afd0ac3d7be389760af9eb780d8bb80f.jpg> referred in <None>
+2021-01-06 15:49:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\27.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/af/d0/thumbnail_afd0ac3d7be389760af9eb780d8bb80f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\27'}
+2021-01-06 15:50:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b8/6a/thumbnail_b86af967b5e9a97175a72b1180a6c025.jpg> (referer: None)
+2021-01-06 15:50:00 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b8/6a/thumbnail_b86af967b5e9a97175a72b1180a6c025.jpg> referred in <None>
+2021-01-06 15:50:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\28.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b8/6a/thumbnail_b86af967b5e9a97175a72b1180a6c025.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\28'}
+2021-01-06 15:50:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7c/4d/thumbnail_7c4d11ff320724903237c73a31b7e16e.jpg> (referer: None)
+2021-01-06 15:50:07 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7c/4d/thumbnail_7c4d11ff320724903237c73a31b7e16e.jpg> referred in <None>
+2021-01-06 15:50:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\29.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7c/4d/thumbnail_7c4d11ff320724903237c73a31b7e16e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\29'}
+2021-01-06 15:50:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/08/e5/thumbnail_08e583dc066c770817caa25db5060c5d.jpg> (referer: None)
+2021-01-06 15:50:14 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/08/e5/thumbnail_08e583dc066c770817caa25db5060c5d.jpg> referred in <None>
+2021-01-06 15:50:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\30.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/08/e5/thumbnail_08e583dc066c770817caa25db5060c5d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\30'}
+2021-01-06 15:50:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:50:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/a7/0a/thumbnail_a70a4bc4787fb36563cb90c54850c70c.jpg> (referer: None)
+2021-01-06 15:50:21 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/a7/0a/thumbnail_a70a4bc4787fb36563cb90c54850c70c.jpg> referred in <None>
+2021-01-06 15:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\31.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/a7/0a/thumbnail_a70a4bc4787fb36563cb90c54850c70c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\31'}
+2021-01-06 15:50:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b3/0e/thumbnail_b30e4767f2e4caf2911da95417b26fb1.jpg> (referer: None)
+2021-01-06 15:50:27 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b3/0e/thumbnail_b30e4767f2e4caf2911da95417b26fb1.jpg> referred in <None>
+2021-01-06 15:50:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\32.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b3/0e/thumbnail_b30e4767f2e4caf2911da95417b26fb1.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\32'}
+2021-01-06 15:50:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ee/92/thumbnail_ee92089ea9a49937af7efb5c72633d62.jpg> (referer: None)
+2021-01-06 15:50:31 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ee/92/thumbnail_ee92089ea9a49937af7efb5c72633d62.jpg> referred in <None>
+2021-01-06 15:50:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\33.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ee/92/thumbnail_ee92089ea9a49937af7efb5c72633d62.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\33'}
+2021-01-06 15:50:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/e9/16/thumbnail_e916a7211b8b96f065a78c02a8418fec.jpg> (referer: None)
+2021-01-06 15:50:37 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/e9/16/thumbnail_e916a7211b8b96f065a78c02a8418fec.jpg> referred in <None>
+2021-01-06 15:50:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\34.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/e9/16/thumbnail_e916a7211b8b96f065a78c02a8418fec.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\34'}
+2021-01-06 15:50:42 [scrapy.extensions.logstats] INFO: Crawled 37 pages (at 9 pages/min), scraped 34 items (at 9 items/min)
+2021-01-06 15:50:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f9/c1/thumbnail_f9c105ac672cbf6e3f54f24304e0e7b7.jpg> (referer: None)
+2021-01-06 15:50:44 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f9/c1/thumbnail_f9c105ac672cbf6e3f54f24304e0e7b7.jpg> referred in <None>
+2021-01-06 15:50:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\35.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f9/c1/thumbnail_f9c105ac672cbf6e3f54f24304e0e7b7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\35'}
+2021-01-06 15:50:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/03/6a/thumbnail_036aef8f9c79eb08d49f3d095b890bf3.jpg> (referer: None)
+2021-01-06 15:50:47 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/03/6a/thumbnail_036aef8f9c79eb08d49f3d095b890bf3.jpg> referred in <None>
+2021-01-06 15:50:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\36.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/03/6a/thumbnail_036aef8f9c79eb08d49f3d095b890bf3.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\36'}
+2021-01-06 15:50:47 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:50:47 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:50:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5a/ae/thumbnail_5aae4d330d5aac9013af2a068d44c96b.jpg> (referer: None)
+2021-01-06 15:50:53 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5a/ae/thumbnail_5aae4d330d5aac9013af2a068d44c96b.jpg> referred in <None>
+2021-01-06 15:50:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\37.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5a/ae/thumbnail_5aae4d330d5aac9013af2a068d44c96b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\37'}
+2021-01-06 15:51:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/4c/69/thumbnail_4c697b74f92d8b6c475d5d0e2bbaddb5.jpg> (referer: None)
+2021-01-06 15:51:00 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/4c/69/thumbnail_4c697b74f92d8b6c475d5d0e2bbaddb5.jpg> referred in <None>
+2021-01-06 15:51:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\38.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/4c/69/thumbnail_4c697b74f92d8b6c475d5d0e2bbaddb5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\38'}
+2021-01-06 15:51:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/56/ac/thumbnail_56ace436c5b5e2c3dc41c80fabd8434a.jpg> (referer: None)
+2021-01-06 15:51:05 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/56/ac/thumbnail_56ace436c5b5e2c3dc41c80fabd8434a.jpg> referred in <None>
+2021-01-06 15:51:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\39.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/56/ac/thumbnail_56ace436c5b5e2c3dc41c80fabd8434a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\39'}
+2021-01-06 15:51:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/10/5b/thumbnail_105b16469ee72319e9921fac6c4bc671.jpg> (referer: None)
+2021-01-06 15:51:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/10/5b/thumbnail_105b16469ee72319e9921fac6c4bc671.jpg> referred in <None>
+2021-01-06 15:51:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\40.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/10/5b/thumbnail_105b16469ee72319e9921fac6c4bc671.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\40'}
+2021-01-06 15:51:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7e/06/thumbnail_7e06194624f816c045497155ab78bf65.jpg> (referer: None)
+2021-01-06 15:51:18 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7e/06/thumbnail_7e06194624f816c045497155ab78bf65.jpg> referred in <None>
+2021-01-06 15:51:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\41.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7e/06/thumbnail_7e06194624f816c045497155ab78bf65.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\41'}
+2021-01-06 15:51:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/03/f3/thumbnail_03f35f8233a75d6d4afc35b85b6572cc.jpg> (referer: None)
+2021-01-06 15:51:32 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/03/f3/thumbnail_03f35f8233a75d6d4afc35b85b6572cc.jpg> referred in <None>
+2021-01-06 15:51:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\42.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/03/f3/thumbnail_03f35f8233a75d6d4afc35b85b6572cc.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\42'}
+2021-01-06 15:51:32 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:51:32 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:51:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/fe/76/thumbnail_fe76f6b6cf540a7b308c4d020a6611b3.jpg> (referer: None)
+2021-01-06 15:51:33 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/fe/76/thumbnail_fe76f6b6cf540a7b308c4d020a6611b3.jpg> referred in <None>
+2021-01-06 15:51:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\43.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/fe/76/thumbnail_fe76f6b6cf540a7b308c4d020a6611b3.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\43'}
+2021-01-06 15:51:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/76/b6/thumbnail_76b6eb5a87088ce507d177b4d777702a.jpg> (referer: None)
+2021-01-06 15:51:39 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/76/b6/thumbnail_76b6eb5a87088ce507d177b4d777702a.jpg> referred in <None>
+2021-01-06 15:51:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\44.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/76/b6/thumbnail_76b6eb5a87088ce507d177b4d777702a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\44'}
+2021-01-06 15:51:42 [scrapy.extensions.logstats] INFO: Crawled 47 pages (at 10 pages/min), scraped 44 items (at 10 items/min)
+2021-01-06 15:51:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/92/df/thumbnail_92df9e8d6e455e3ff9d3f129b4e8d62b.jpg> (referer: None)
+2021-01-06 15:51:46 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/92/df/thumbnail_92df9e8d6e455e3ff9d3f129b4e8d62b.jpg> referred in <None>
+2021-01-06 15:51:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\45.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/92/df/thumbnail_92df9e8d6e455e3ff9d3f129b4e8d62b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\45'}
+2021-01-06 15:51:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/07/78/thumbnail_0778a0441ca73bf0edb455cc2eaae69d.jpg> (referer: None)
+2021-01-06 15:51:52 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/07/78/thumbnail_0778a0441ca73bf0edb455cc2eaae69d.jpg> referred in <None>
+2021-01-06 15:51:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\46.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/07/78/thumbnail_0778a0441ca73bf0edb455cc2eaae69d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\46'}
+2021-01-06 15:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b9/11/thumbnail_b9115c149558e812c84be77794890deb.jpg> (referer: None)
+2021-01-06 15:51:57 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b9/11/thumbnail_b9115c149558e812c84be77794890deb.jpg> referred in <None>
+2021-01-06 15:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\47.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b9/11/thumbnail_b9115c149558e812c84be77794890deb.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\47'}
+2021-01-06 15:52:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/9b/36/thumbnail_9b36096fa33dd9fc8de052212ba0eaa6.jpg> (referer: None)
+2021-01-06 15:52:07 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/9b/36/thumbnail_9b36096fa33dd9fc8de052212ba0eaa6.jpg> referred in <None>
+2021-01-06 15:52:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\48.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/9b/36/thumbnail_9b36096fa33dd9fc8de052212ba0eaa6.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\48'}
+2021-01-06 15:52:08 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:52:08 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:52:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/35/fc/thumbnail_35fceb3b912e2355e5b59f0fc43be684.jpg> (referer: None)
+2021-01-06 15:52:09 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/35/fc/thumbnail_35fceb3b912e2355e5b59f0fc43be684.jpg> referred in <None>
+2021-01-06 15:52:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\49.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/35/fc/thumbnail_35fceb3b912e2355e5b59f0fc43be684.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\49'}
+2021-01-06 15:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/d1/f4/thumbnail_d1f40b4d60465e585bf893a9a003a2f8.jpg> (referer: None)
+2021-01-06 15:52:17 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/d1/f4/thumbnail_d1f40b4d60465e585bf893a9a003a2f8.jpg> referred in <None>
+2021-01-06 15:52:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\50.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/d1/f4/thumbnail_d1f40b4d60465e585bf893a9a003a2f8.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\50'}
+2021-01-06 15:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/d4/30/thumbnail_d4303965efba66b87303c4b194a11ec3.jpg> (referer: None)
+2021-01-06 15:52:22 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/d4/30/thumbnail_d4303965efba66b87303c4b194a11ec3.jpg> referred in <None>
+2021-01-06 15:52:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\51.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/d4/30/thumbnail_d4303965efba66b87303c4b194a11ec3.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\51'}
+2021-01-06 15:52:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/63/a6/thumbnail_63a6ca8a3ded65187c162116d53d2fbb.jpg> (referer: None)
+2021-01-06 15:52:28 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/63/a6/thumbnail_63a6ca8a3ded65187c162116d53d2fbb.jpg> referred in <None>
+2021-01-06 15:52:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\52.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/63/a6/thumbnail_63a6ca8a3ded65187c162116d53d2fbb.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\52'}
+2021-01-06 15:52:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/10/6f/thumbnail_106f875139fef9b84bea68bb998d71a6.jpg> (referer: None)
+2021-01-06 15:52:35 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/10/6f/thumbnail_106f875139fef9b84bea68bb998d71a6.jpg> referred in <None>
+2021-01-06 15:52:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\53.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/10/6f/thumbnail_106f875139fef9b84bea68bb998d71a6.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\53'}
+2021-01-06 15:52:42 [scrapy.extensions.logstats] INFO: Crawled 56 pages (at 9 pages/min), scraped 53 items (at 9 items/min)
+2021-01-06 15:52:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ab/b0/thumbnail_abb0b886cc04eb1d22d6b979242eecf7.jpg> (referer: None)
+2021-01-06 15:52:42 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ab/b0/thumbnail_abb0b886cc04eb1d22d6b979242eecf7.jpg> referred in <None>
+2021-01-06 15:52:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\54.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ab/b0/thumbnail_abb0b886cc04eb1d22d6b979242eecf7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\54'}
+2021-01-06 15:52:42 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:52:42 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:52:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/51/97/thumbnail_51972953197535d0878c950bbd2b4d7b.jpg> (referer: None)
+2021-01-06 15:52:50 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/51/97/thumbnail_51972953197535d0878c950bbd2b4d7b.jpg> referred in <None>
+2021-01-06 15:52:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\55.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/51/97/thumbnail_51972953197535d0878c950bbd2b4d7b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\55'}
+2021-01-06 15:52:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/3b/d9/thumbnail_3bd902533a589140fd36d8b05bb0ca2f.jpg> (referer: None)
+2021-01-06 15:52:56 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/3b/d9/thumbnail_3bd902533a589140fd36d8b05bb0ca2f.jpg> referred in <None>
+2021-01-06 15:52:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\56.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/3b/d9/thumbnail_3bd902533a589140fd36d8b05bb0ca2f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\56'}
+2021-01-06 15:53:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/df/45/thumbnail_df453715c1cdc81325a0d01d2f6c0af5.jpg> (referer: None)
+2021-01-06 15:53:02 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/df/45/thumbnail_df453715c1cdc81325a0d01d2f6c0af5.jpg> referred in <None>
+2021-01-06 15:53:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\57.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/df/45/thumbnail_df453715c1cdc81325a0d01d2f6c0af5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\57'}
+2021-01-06 15:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/dd/fc/thumbnail_ddfcb5af5f94d10f8d52ee3508e90f3c.jpg> (referer: None)
+2021-01-06 15:53:08 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/dd/fc/thumbnail_ddfcb5af5f94d10f8d52ee3508e90f3c.jpg> referred in <None>
+2021-01-06 15:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\58.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/dd/fc/thumbnail_ddfcb5af5f94d10f8d52ee3508e90f3c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\58'}
+2021-01-06 15:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/e3/9b/thumbnail_e39b5210337d6033fb04bad4d9f03477.jpg> (referer: None)
+2021-01-06 15:53:13 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/e3/9b/thumbnail_e39b5210337d6033fb04bad4d9f03477.jpg> referred in <None>
+2021-01-06 15:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\59.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/e3/9b/thumbnail_e39b5210337d6033fb04bad4d9f03477.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\59'}
+2021-01-06 15:53:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/71/65/thumbnail_716597edacc9ec2268a990e492eb53f6.jpg> (referer: None)
+2021-01-06 15:53:20 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/71/65/thumbnail_716597edacc9ec2268a990e492eb53f6.jpg> referred in <None>
+2021-01-06 15:53:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\60.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/71/65/thumbnail_716597edacc9ec2268a990e492eb53f6.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\60'}
+2021-01-06 15:53:20 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:53:20 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/97/81/thumbnail_97817bf8a2dbbf5eb8e003fcd98b39c8.jpg> (referer: None)
+2021-01-06 15:53:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/97/81/thumbnail_97817bf8a2dbbf5eb8e003fcd98b39c8.jpg> referred in <None>
+2021-01-06 15:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\61.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/97/81/thumbnail_97817bf8a2dbbf5eb8e003fcd98b39c8.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\61'}
+2021-01-06 15:53:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ba/b4/thumbnail_bab4a9cc9356d3eb0401801ca9fe453c.jpg> (referer: None)
+2021-01-06 15:53:32 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ba/b4/thumbnail_bab4a9cc9356d3eb0401801ca9fe453c.jpg> referred in <None>
+2021-01-06 15:53:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\62.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ba/b4/thumbnail_bab4a9cc9356d3eb0401801ca9fe453c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\62'}
+2021-01-06 15:53:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/37/f6/thumbnail_37f6b3ef31005d3509f881390bb8cea0.jpg> (referer: None)
+2021-01-06 15:53:37 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/37/f6/thumbnail_37f6b3ef31005d3509f881390bb8cea0.jpg> referred in <None>
+2021-01-06 15:53:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\63.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/37/f6/thumbnail_37f6b3ef31005d3509f881390bb8cea0.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\63'}
+2021-01-06 15:53:42 [scrapy.extensions.logstats] INFO: Crawled 66 pages (at 10 pages/min), scraped 63 items (at 10 items/min)
+2021-01-06 15:53:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f2/08/thumbnail_f2084059b43ea0cc3149eb0baaa05e03.jpg> (referer: None)
+2021-01-06 15:53:43 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f2/08/thumbnail_f2084059b43ea0cc3149eb0baaa05e03.jpg> referred in <None>
+2021-01-06 15:53:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\64.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f2/08/thumbnail_f2084059b43ea0cc3149eb0baaa05e03.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\64'}
+2021-01-06 15:53:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ef/69/thumbnail_ef69828e4cdd74b34bc772dcf9274e53.jpg> (referer: None)
+2021-01-06 15:53:51 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ef/69/thumbnail_ef69828e4cdd74b34bc772dcf9274e53.jpg> referred in <None>
+2021-01-06 15:53:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\65.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ef/69/thumbnail_ef69828e4cdd74b34bc772dcf9274e53.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\65'}
+2021-01-06 15:53:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/09/53/thumbnail_09538412d1847cb005e2414968629ffb.jpg> (referer: None)
+2021-01-06 15:53:56 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/09/53/thumbnail_09538412d1847cb005e2414968629ffb.jpg> referred in <None>
+2021-01-06 15:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\66.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/09/53/thumbnail_09538412d1847cb005e2414968629ffb.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\66'}
+2021-01-06 15:53:56 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:53:56 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:54:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7d/35/thumbnail_7d357499ce67b0ee061030ff18484fe2.jpg> (referer: None)
+2021-01-06 15:54:04 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7d/35/thumbnail_7d357499ce67b0ee061030ff18484fe2.jpg> referred in <None>
+2021-01-06 15:54:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\67.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7d/35/thumbnail_7d357499ce67b0ee061030ff18484fe2.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\67'}
+2021-01-06 15:54:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/cb/8a/thumbnail_cb8a075a06cc1cbecd6cf40306e978c5.jpg> (referer: None)
+2021-01-06 15:54:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/cb/8a/thumbnail_cb8a075a06cc1cbecd6cf40306e978c5.jpg> referred in <None>
+2021-01-06 15:54:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\68.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/cb/8a/thumbnail_cb8a075a06cc1cbecd6cf40306e978c5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\68'}
+2021-01-06 15:54:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/2a/09/thumbnail_2a099b2c321bda8d8f3e47e3c26aba16.jpg> (referer: None)
+2021-01-06 15:54:16 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/2a/09/thumbnail_2a099b2c321bda8d8f3e47e3c26aba16.jpg> referred in <None>
+2021-01-06 15:54:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\69.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/2a/09/thumbnail_2a099b2c321bda8d8f3e47e3c26aba16.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\69'}
+2021-01-06 15:54:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/58/e1/thumbnail_58e1b1c9ddf478053240e0d232f11eeb.jpg> (referer: None)
+2021-01-06 15:54:21 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/58/e1/thumbnail_58e1b1c9ddf478053240e0d232f11eeb.jpg> referred in <None>
+2021-01-06 15:54:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\70.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/58/e1/thumbnail_58e1b1c9ddf478053240e0d232f11eeb.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\70'}
+2021-01-06 15:54:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/99/56/thumbnail_995693697054323d49cbaa96edba0db4.jpg> (referer: None)
+2021-01-06 15:54:25 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/99/56/thumbnail_995693697054323d49cbaa96edba0db4.jpg> referred in <None>
+2021-01-06 15:54:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\71.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/99/56/thumbnail_995693697054323d49cbaa96edba0db4.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\71'}
+2021-01-06 15:54:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/53/41/thumbnail_534122f0bec0dcad268e514645b19585.jpg> (referer: None)
+2021-01-06 15:54:32 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/53/41/thumbnail_534122f0bec0dcad268e514645b19585.jpg> referred in <None>
+2021-01-06 15:54:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\72.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/53/41/thumbnail_534122f0bec0dcad268e514645b19585.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\72'}
+2021-01-06 15:54:32 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:54:32 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:54:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5a/14/thumbnail_5a142998c316544785206d9e2a5d33c3.jpg> (referer: None)
+2021-01-06 15:54:38 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5a/14/thumbnail_5a142998c316544785206d9e2a5d33c3.jpg> referred in <None>
+2021-01-06 15:54:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\73.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5a/14/thumbnail_5a142998c316544785206d9e2a5d33c3.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\73'}
+2021-01-06 15:54:42 [scrapy.extensions.logstats] INFO: Crawled 76 pages (at 10 pages/min), scraped 73 items (at 10 items/min)
+2021-01-06 15:54:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/1e/ea/thumbnail_1eea39fc5a02ec1988b7ef3f641433e2.jpg> (referer: None)
+2021-01-06 15:54:59 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/1e/ea/thumbnail_1eea39fc5a02ec1988b7ef3f641433e2.jpg> referred in <None>
+2021-01-06 15:54:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\74.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/1e/ea/thumbnail_1eea39fc5a02ec1988b7ef3f641433e2.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\74'}
+2021-01-06 15:55:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/d6/21/thumbnail_d62120f04a66d04d04ee35951e48ed80.jpg> (referer: None)
+2021-01-06 15:55:01 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/d6/21/thumbnail_d62120f04a66d04d04ee35951e48ed80.jpg> referred in <None>
+2021-01-06 15:55:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\75.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/d6/21/thumbnail_d62120f04a66d04d04ee35951e48ed80.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\75'}
+2021-01-06 15:55:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/bd/41/thumbnail_bd4162cd660690c7f9cd05564976634e.jpg> (referer: None)
+2021-01-06 15:55:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/bd/41/thumbnail_bd4162cd660690c7f9cd05564976634e.jpg> referred in <None>
+2021-01-06 15:55:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\76.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/bd/41/thumbnail_bd4162cd660690c7f9cd05564976634e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\76'}
+2021-01-06 15:55:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/e9/27/thumbnail_e927656d1a1f0f01860b0f822851dca5.jpg> (referer: None)
+2021-01-06 15:55:13 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/e9/27/thumbnail_e927656d1a1f0f01860b0f822851dca5.jpg> referred in <None>
+2021-01-06 15:55:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\77.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/e9/27/thumbnail_e927656d1a1f0f01860b0f822851dca5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\77'}
+2021-01-06 15:55:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7e/e6/thumbnail_7ee6183a24485f89da0eb81bb502c67f.jpg> (referer: None)
+2021-01-06 15:55:19 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7e/e6/thumbnail_7ee6183a24485f89da0eb81bb502c67f.jpg> referred in <None>
+2021-01-06 15:55:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\78.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7e/e6/thumbnail_7ee6183a24485f89da0eb81bb502c67f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\78'}
+2021-01-06 15:55:20 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:55:20 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:55:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/1a/4e/thumbnail_1a4e3d54f0da3d1c1712dd8f69250f80.jpg> (referer: None)
+2021-01-06 15:55:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/1a/4e/thumbnail_1a4e3d54f0da3d1c1712dd8f69250f80.jpg> referred in <None>
+2021-01-06 15:55:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\79.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/1a/4e/thumbnail_1a4e3d54f0da3d1c1712dd8f69250f80.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\79'}
+2021-01-06 15:55:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/6b/99/thumbnail_6b993b8a13d0d1e7f3b52c6a290b512b.jpg> (referer: None)
+2021-01-06 15:55:34 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/6b/99/thumbnail_6b993b8a13d0d1e7f3b52c6a290b512b.jpg> referred in <None>
+2021-01-06 15:55:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\80.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/6b/99/thumbnail_6b993b8a13d0d1e7f3b52c6a290b512b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\80'}
+2021-01-06 15:55:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/14/b8/thumbnail_14b8331d2a003a3fadefdba45ed63e92.jpg> (referer: None)
+2021-01-06 15:55:40 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/14/b8/thumbnail_14b8331d2a003a3fadefdba45ed63e92.jpg> referred in <None>
+2021-01-06 15:55:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\81.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/14/b8/thumbnail_14b8331d2a003a3fadefdba45ed63e92.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\81'}
+2021-01-06 15:55:42 [scrapy.extensions.logstats] INFO: Crawled 84 pages (at 8 pages/min), scraped 81 items (at 8 items/min)
+2021-01-06 15:55:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7c/c6/thumbnail_7cc63023aad87cd89e5f1d2404f95b2f.jpg> (referer: None)
+2021-01-06 15:55:44 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7c/c6/thumbnail_7cc63023aad87cd89e5f1d2404f95b2f.jpg> referred in <None>
+2021-01-06 15:55:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\82.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7c/c6/thumbnail_7cc63023aad87cd89e5f1d2404f95b2f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\82'}
+2021-01-06 15:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/bd/21/thumbnail_bd21aa3e66eb33640e5626f57990341d.jpg> (referer: None)
+2021-01-06 15:55:52 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/bd/21/thumbnail_bd21aa3e66eb33640e5626f57990341d.jpg> referred in <None>
+2021-01-06 15:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\83.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/bd/21/thumbnail_bd21aa3e66eb33640e5626f57990341d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\83'}
+2021-01-06 15:55:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/46/a4/thumbnail_46a490e1997ea825a681045f8d3a3539.jpg> (referer: None)
+2021-01-06 15:55:55 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/46/a4/thumbnail_46a490e1997ea825a681045f8d3a3539.jpg> referred in <None>
+2021-01-06 15:55:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\84.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/46/a4/thumbnail_46a490e1997ea825a681045f8d3a3539.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\84'}
+2021-01-06 15:55:55 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:55:55 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:56:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/e8/ad/thumbnail_e8ad9eae2b36b19aa8002e777601718d.jpg> (referer: None)
+2021-01-06 15:56:02 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/e8/ad/thumbnail_e8ad9eae2b36b19aa8002e777601718d.jpg> referred in <None>
+2021-01-06 15:56:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\85.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/e8/ad/thumbnail_e8ad9eae2b36b19aa8002e777601718d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\85'}
+2021-01-06 15:56:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/1a/6e/thumbnail_1a6e05a987a004581e7d7e2b5af77843.jpg> (referer: None)
+2021-01-06 15:56:08 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/1a/6e/thumbnail_1a6e05a987a004581e7d7e2b5af77843.jpg> referred in <None>
+2021-01-06 15:56:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\86.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/1a/6e/thumbnail_1a6e05a987a004581e7d7e2b5af77843.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\86'}
+2021-01-06 15:56:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/fe/b9/thumbnail_feb9c88fcc0555f63888b0d27f884121.jpg> (referer: None)
+2021-01-06 15:56:15 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/fe/b9/thumbnail_feb9c88fcc0555f63888b0d27f884121.jpg> referred in <None>
+2021-01-06 15:56:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\87.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/fe/b9/thumbnail_feb9c88fcc0555f63888b0d27f884121.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\87'}
+2021-01-06 15:56:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/dd/c1/thumbnail_ddc16df7bf62cacf534dd1d0d7aac66b.jpg> (referer: None)
+2021-01-06 15:56:22 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/dd/c1/thumbnail_ddc16df7bf62cacf534dd1d0d7aac66b.jpg> referred in <None>
+2021-01-06 15:56:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\88.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/dd/c1/thumbnail_ddc16df7bf62cacf534dd1d0d7aac66b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\88'}
+2021-01-06 15:56:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/6b/29/thumbnail_6b29ead69cf3caa31c794874abbe5966.jpg> (referer: None)
+2021-01-06 15:56:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/6b/29/thumbnail_6b29ead69cf3caa31c794874abbe5966.jpg> referred in <None>
+2021-01-06 15:56:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\89.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/6b/29/thumbnail_6b29ead69cf3caa31c794874abbe5966.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\89'}
+2021-01-06 15:56:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/0d/05/thumbnail_0d05adef649f3c71ca93c9c132dab33b.jpg> (referer: None)
+2021-01-06 15:56:32 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/0d/05/thumbnail_0d05adef649f3c71ca93c9c132dab33b.jpg> referred in <None>
+2021-01-06 15:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\90.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/0d/05/thumbnail_0d05adef649f3c71ca93c9c132dab33b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\90'}
+2021-01-06 15:56:33 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:56:33 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:56:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/56/45/thumbnail_5645e80d5961c5de3eadf8c4df8831ec.jpg> (referer: None)
+2021-01-06 15:56:38 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/56/45/thumbnail_5645e80d5961c5de3eadf8c4df8831ec.jpg> referred in <None>
+2021-01-06 15:56:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\91.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/56/45/thumbnail_5645e80d5961c5de3eadf8c4df8831ec.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\91'}
+2021-01-06 15:56:42 [scrapy.extensions.logstats] INFO: Crawled 94 pages (at 10 pages/min), scraped 91 items (at 10 items/min)
+2021-01-06 15:56:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/db/a4/thumbnail_dba428e62fd68f61a30d5a4750ed7929.jpg> (referer: None)
+2021-01-06 15:56:43 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/db/a4/thumbnail_dba428e62fd68f61a30d5a4750ed7929.jpg> referred in <None>
+2021-01-06 15:56:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\92.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/db/a4/thumbnail_dba428e62fd68f61a30d5a4750ed7929.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\92'}
+2021-01-06 15:56:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/0d/45/thumbnail_0d451905f7ef6aa9fc3ae1b861c77952.jpg> (referer: None)
+2021-01-06 15:56:50 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/0d/45/thumbnail_0d451905f7ef6aa9fc3ae1b861c77952.jpg> referred in <None>
+2021-01-06 15:56:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\93.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/0d/45/thumbnail_0d451905f7ef6aa9fc3ae1b861c77952.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\93'}
+2021-01-06 15:56:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/9a/4f/thumbnail_9a4fed2382351a9a99d047cb974592d1.jpg> (referer: None)
+2021-01-06 15:56:55 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/9a/4f/thumbnail_9a4fed2382351a9a99d047cb974592d1.jpg> referred in <None>
+2021-01-06 15:56:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\94.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/9a/4f/thumbnail_9a4fed2382351a9a99d047cb974592d1.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\94'}
+2021-01-06 15:57:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/cd/43/thumbnail_cd435dc0c983aa5d42282b7e13c0bbb7.jpg> (referer: None)
+2021-01-06 15:57:03 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/cd/43/thumbnail_cd435dc0c983aa5d42282b7e13c0bbb7.jpg> referred in <None>
+2021-01-06 15:57:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\95.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/cd/43/thumbnail_cd435dc0c983aa5d42282b7e13c0bbb7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\95'}
+2021-01-06 15:57:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/47/35/thumbnail_4735ffca4054354da53c8d71d03d6e01.jpg> (referer: None)
+2021-01-06 15:57:09 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/47/35/thumbnail_4735ffca4054354da53c8d71d03d6e01.jpg> referred in <None>
+2021-01-06 15:57:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\96.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/47/35/thumbnail_4735ffca4054354da53c8d71d03d6e01.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\96'}
+2021-01-06 15:57:09 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:57:09 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:57:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/94/8d/thumbnail_948dc59fd5c75c4e27cfef81339f8364.jpg> (referer: None)
+2021-01-06 15:57:15 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/94/8d/thumbnail_948dc59fd5c75c4e27cfef81339f8364.jpg> referred in <None>
+2021-01-06 15:57:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\97.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/94/8d/thumbnail_948dc59fd5c75c4e27cfef81339f8364.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\97'}
+2021-01-06 15:57:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/db/55/thumbnail_db5536e5c77e9bc63c83a4ca45a32c95.jpg> (referer: None)
+2021-01-06 15:57:22 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/db/55/thumbnail_db5536e5c77e9bc63c83a4ca45a32c95.jpg> referred in <None>
+2021-01-06 15:57:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\98.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/db/55/thumbnail_db5536e5c77e9bc63c83a4ca45a32c95.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\98'}
+2021-01-06 15:57:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5b/56/thumbnail_5b569f2ad07a84a126fcdc7d20ea78e8.jpg> (referer: None)
+2021-01-06 15:57:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5b/56/thumbnail_5b569f2ad07a84a126fcdc7d20ea78e8.jpg> referred in <None>
+2021-01-06 15:57:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\99.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5b/56/thumbnail_5b569f2ad07a84a126fcdc7d20ea78e8.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\99'}
+2021-01-06 15:57:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f9/32/thumbnail_f932c445172e0f4760f87875a19708e5.jpg> (referer: None)
+2021-01-06 15:57:33 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f9/32/thumbnail_f932c445172e0f4760f87875a19708e5.jpg> referred in <None>
+2021-01-06 15:57:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\100.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f9/32/thumbnail_f932c445172e0f4760f87875a19708e5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\100'}
+2021-01-06 15:57:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/54/88/thumbnail_54883ddead9f50f140fe2b6edb50ed95.jpg> (referer: None)
+2021-01-06 15:57:40 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/54/88/thumbnail_54883ddead9f50f140fe2b6edb50ed95.jpg> referred in <None>
+2021-01-06 15:57:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\101.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/54/88/thumbnail_54883ddead9f50f140fe2b6edb50ed95.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\101'}
+2021-01-06 15:57:42 [scrapy.extensions.logstats] INFO: Crawled 104 pages (at 10 pages/min), scraped 101 items (at 10 items/min)
+2021-01-06 15:57:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7b/28/thumbnail_7b28c432898b8d26a581507bed0f2401.jpg> (referer: None)
+2021-01-06 15:57:50 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7b/28/thumbnail_7b28c432898b8d26a581507bed0f2401.jpg> referred in <None>
+2021-01-06 15:57:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\102.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7b/28/thumbnail_7b28c432898b8d26a581507bed0f2401.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\102'}
+2021-01-06 15:57:50 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:57:50 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:57:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/2a/40/thumbnail_2a40e35f6f022d53b47983ec892732cd.jpg> (referer: None)
+2021-01-06 15:57:55 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/2a/40/thumbnail_2a40e35f6f022d53b47983ec892732cd.jpg> referred in <None>
+2021-01-06 15:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\103.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/2a/40/thumbnail_2a40e35f6f022d53b47983ec892732cd.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\103'}
+2021-01-06 15:57:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b7/1f/thumbnail_b71f39bb06e697297d65d0ed72156ddf.jpg> (referer: None)
+2021-01-06 15:57:59 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b7/1f/thumbnail_b71f39bb06e697297d65d0ed72156ddf.jpg> referred in <None>
+2021-01-06 15:57:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\104.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b7/1f/thumbnail_b71f39bb06e697297d65d0ed72156ddf.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\104'}
+2021-01-06 15:58:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b7/08/thumbnail_b708a109c932846c6b94eeee67abcab5.jpg> (referer: None)
+2021-01-06 15:58:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b7/08/thumbnail_b708a109c932846c6b94eeee67abcab5.jpg> referred in <None>
+2021-01-06 15:58:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\105.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b7/08/thumbnail_b708a109c932846c6b94eeee67abcab5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\105'}
+2021-01-06 15:58:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/fe/90/thumbnail_fe90f71eab3a6965e4755817fbcf1cd4.jpg> (referer: None)
+2021-01-06 15:58:12 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/fe/90/thumbnail_fe90f71eab3a6965e4755817fbcf1cd4.jpg> referred in <None>
+2021-01-06 15:58:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\106.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/fe/90/thumbnail_fe90f71eab3a6965e4755817fbcf1cd4.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\106'}
+2021-01-06 15:58:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5b/e1/thumbnail_5be1d8421c8bbc03ad7b931faaebb840.jpg> (referer: None)
+2021-01-06 15:58:19 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5b/e1/thumbnail_5be1d8421c8bbc03ad7b931faaebb840.jpg> referred in <None>
+2021-01-06 15:58:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\107.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5b/e1/thumbnail_5be1d8421c8bbc03ad7b931faaebb840.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\107'}
+2021-01-06 15:58:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/a8/b4/thumbnail_a8b4d2dc86c0817d19a9feb79d505c4d.jpg> (referer: None)
+2021-01-06 15:58:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/a8/b4/thumbnail_a8b4d2dc86c0817d19a9feb79d505c4d.jpg> referred in <None>
+2021-01-06 15:58:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\108.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/a8/b4/thumbnail_a8b4d2dc86c0817d19a9feb79d505c4d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\108'}
+2021-01-06 15:58:26 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:58:26 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:58:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/d1/f2/thumbnail_d1f2c19d6a6654c6423303604260bb75.jpg> (referer: None)
+2021-01-06 15:58:34 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/d1/f2/thumbnail_d1f2c19d6a6654c6423303604260bb75.jpg> referred in <None>
+2021-01-06 15:58:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\109.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/d1/f2/thumbnail_d1f2c19d6a6654c6423303604260bb75.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\109'}
+2021-01-06 15:58:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/44/74/thumbnail_447471a85c818882007e1efc6afeb045.jpg> (referer: None)
+2021-01-06 15:58:40 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/44/74/thumbnail_447471a85c818882007e1efc6afeb045.jpg> referred in <None>
+2021-01-06 15:58:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\110.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/44/74/thumbnail_447471a85c818882007e1efc6afeb045.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\110'}
+2021-01-06 15:58:42 [scrapy.extensions.logstats] INFO: Crawled 113 pages (at 9 pages/min), scraped 110 items (at 9 items/min)
+2021-01-06 15:58:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/1f/7a/thumbnail_1f7aa8d7bad1bcfd7be6d1727333ac7f.jpg> (referer: None)
+2021-01-06 15:58:46 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/1f/7a/thumbnail_1f7aa8d7bad1bcfd7be6d1727333ac7f.jpg> referred in <None>
+2021-01-06 15:58:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\111.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/1f/7a/thumbnail_1f7aa8d7bad1bcfd7be6d1727333ac7f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\111'}
+2021-01-06 15:58:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5a/da/thumbnail_5adae9db9c41b6fa94d08360152dbd90.jpg> (referer: None)
+2021-01-06 15:58:54 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5a/da/thumbnail_5adae9db9c41b6fa94d08360152dbd90.jpg> referred in <None>
+2021-01-06 15:58:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\112.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5a/da/thumbnail_5adae9db9c41b6fa94d08360152dbd90.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\112'}
+2021-01-06 15:58:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/6d/c7/thumbnail_6dc7605c6cd24933eff48763bbb830bf.jpg> (referer: None)
+2021-01-06 15:58:58 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/6d/c7/thumbnail_6dc7605c6cd24933eff48763bbb830bf.jpg> referred in <None>
+2021-01-06 15:58:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\113.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/6d/c7/thumbnail_6dc7605c6cd24933eff48763bbb830bf.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\113'}
+2021-01-06 15:59:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/0f/99/thumbnail_0f99d727f446a52166d1c7de0b8049ae.jpg> (referer: None)
+2021-01-06 15:59:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/0f/99/thumbnail_0f99d727f446a52166d1c7de0b8049ae.jpg> referred in <None>
+2021-01-06 15:59:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\114.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/0f/99/thumbnail_0f99d727f446a52166d1c7de0b8049ae.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\114'}
+2021-01-06 15:59:06 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:59:06 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:59:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/15/fb/thumbnail_15fb10f0b9898e405ae467c4554a60f5.jpg> (referer: None)
+2021-01-06 15:59:13 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/15/fb/thumbnail_15fb10f0b9898e405ae467c4554a60f5.jpg> referred in <None>
+2021-01-06 15:59:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\115.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/15/fb/thumbnail_15fb10f0b9898e405ae467c4554a60f5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\115'}
+2021-01-06 15:59:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f1/0d/thumbnail_f10da12d29deb16c5d58277508600beb.jpg> (referer: None)
+2021-01-06 15:59:18 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f1/0d/thumbnail_f10da12d29deb16c5d58277508600beb.jpg> referred in <None>
+2021-01-06 15:59:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\116.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f1/0d/thumbnail_f10da12d29deb16c5d58277508600beb.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\116'}
+2021-01-06 15:59:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/75/b2/thumbnail_75b28823dfc53fb9636e2825abfbe24f.jpg> (referer: None)
+2021-01-06 15:59:24 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/75/b2/thumbnail_75b28823dfc53fb9636e2825abfbe24f.jpg> referred in <None>
+2021-01-06 15:59:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\117.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/75/b2/thumbnail_75b28823dfc53fb9636e2825abfbe24f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\117'}
+2021-01-06 15:59:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/20/4c/thumbnail_204c1b4e04154b9694dd85d479f6b43e.jpg> (referer: None)
+2021-01-06 15:59:29 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/20/4c/thumbnail_204c1b4e04154b9694dd85d479f6b43e.jpg> referred in <None>
+2021-01-06 15:59:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\118.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/20/4c/thumbnail_204c1b4e04154b9694dd85d479f6b43e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\118'}
+2021-01-06 15:59:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/1a/04/thumbnail_1a048def116678ae182d1deea6c81eb0.jpg> (referer: None)
+2021-01-06 15:59:35 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/1a/04/thumbnail_1a048def116678ae182d1deea6c81eb0.jpg> referred in <None>
+2021-01-06 15:59:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\119.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/1a/04/thumbnail_1a048def116678ae182d1deea6c81eb0.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\119'}
+2021-01-06 15:59:42 [scrapy.extensions.logstats] INFO: Crawled 122 pages (at 9 pages/min), scraped 119 items (at 9 items/min)
+2021-01-06 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/d8/05/thumbnail_d8054bbd6dfbbb93a0a4ca7598ce73ab.jpg> (referer: None)
+2021-01-06 15:59:44 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/d8/05/thumbnail_d8054bbd6dfbbb93a0a4ca7598ce73ab.jpg> referred in <None>
+2021-01-06 15:59:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\120.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/d8/05/thumbnail_d8054bbd6dfbbb93a0a4ca7598ce73ab.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\120'}
+2021-01-06 15:59:44 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 15:59:44 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 15:59:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ef/3b/thumbnail_ef3badf44d669e4e70f77e18deb8b16c.jpg> (referer: None)
+2021-01-06 15:59:48 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ef/3b/thumbnail_ef3badf44d669e4e70f77e18deb8b16c.jpg> referred in <None>
+2021-01-06 15:59:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\121.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ef/3b/thumbnail_ef3badf44d669e4e70f77e18deb8b16c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\121'}
+2021-01-06 15:59:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/95/0e/thumbnail_950e77a106cc644de78f001e545fb8be.jpg> (referer: None)
+2021-01-06 15:59:53 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/95/0e/thumbnail_950e77a106cc644de78f001e545fb8be.jpg> referred in <None>
+2021-01-06 15:59:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\122.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/95/0e/thumbnail_950e77a106cc644de78f001e545fb8be.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\122'}
+2021-01-06 16:00:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/de/e8/thumbnail_dee8e461540d25cbb90eae16269a3923.jpg> (referer: None)
+2021-01-06 16:00:00 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/de/e8/thumbnail_dee8e461540d25cbb90eae16269a3923.jpg> referred in <None>
+2021-01-06 16:00:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\123.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/de/e8/thumbnail_dee8e461540d25cbb90eae16269a3923.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\123'}
+2021-01-06 16:00:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/2b/70/thumbnail_2b705ce5ec1851d97acd211f9ba7376e.jpg> (referer: None)
+2021-01-06 16:00:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/2b/70/thumbnail_2b705ce5ec1851d97acd211f9ba7376e.jpg> referred in <None>
+2021-01-06 16:00:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\124.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/2b/70/thumbnail_2b705ce5ec1851d97acd211f9ba7376e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\124'}
+2021-01-06 16:00:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/8c/aa/thumbnail_8caa4a441547e06c9cd7d4932a80b54d.jpg> (referer: None)
+2021-01-06 16:00:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/8c/aa/thumbnail_8caa4a441547e06c9cd7d4932a80b54d.jpg> referred in <None>
+2021-01-06 16:00:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\125.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/8c/aa/thumbnail_8caa4a441547e06c9cd7d4932a80b54d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\125'}
+2021-01-06 16:00:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/57/e9/thumbnail_57e9f650f54e48c30587cf20c1369100.jpg> (referer: None)
+2021-01-06 16:00:15 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/57/e9/thumbnail_57e9f650f54e48c30587cf20c1369100.jpg> referred in <None>
+2021-01-06 16:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\126.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/57/e9/thumbnail_57e9f650f54e48c30587cf20c1369100.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\126'}
+2021-01-06 16:00:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:00:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:00:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/18/f1/thumbnail_18f116ffeae6c963aaae7ab084b72ed8.jpg> (referer: None)
+2021-01-06 16:00:21 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/18/f1/thumbnail_18f116ffeae6c963aaae7ab084b72ed8.jpg> referred in <None>
+2021-01-06 16:00:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\127.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/18/f1/thumbnail_18f116ffeae6c963aaae7ab084b72ed8.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\127'}
+2021-01-06 16:00:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/4e/b6/thumbnail_4eb642e52e9859e554287bab3ffc5121.jpg> (referer: None)
+2021-01-06 16:00:30 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/4e/b6/thumbnail_4eb642e52e9859e554287bab3ffc5121.jpg> referred in <None>
+2021-01-06 16:00:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\128.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/4e/b6/thumbnail_4eb642e52e9859e554287bab3ffc5121.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\128'}
+2021-01-06 16:00:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/84/ad/thumbnail_84ad1efe0a20f0afd96cc6b54984a30e.jpg> (referer: None)
+2021-01-06 16:00:36 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/84/ad/thumbnail_84ad1efe0a20f0afd96cc6b54984a30e.jpg> referred in <None>
+2021-01-06 16:00:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\129.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/84/ad/thumbnail_84ad1efe0a20f0afd96cc6b54984a30e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\129'}
+2021-01-06 16:00:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/28/a4/thumbnail_28a443a260dd1ccd0a87a92e08f5e034.jpg> (referer: None)
+2021-01-06 16:00:42 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/28/a4/thumbnail_28a443a260dd1ccd0a87a92e08f5e034.jpg> referred in <None>
+2021-01-06 16:00:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\130.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/28/a4/thumbnail_28a443a260dd1ccd0a87a92e08f5e034.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\130'}
+2021-01-06 16:00:42 [scrapy.extensions.logstats] INFO: Crawled 133 pages (at 11 pages/min), scraped 130 items (at 11 items/min)
+2021-01-06 16:00:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/26/15/thumbnail_26154e5c4c8207c3e2ce0c1223a5ebf5.jpg> (referer: None)
+2021-01-06 16:00:48 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/26/15/thumbnail_26154e5c4c8207c3e2ce0c1223a5ebf5.jpg> referred in <None>
+2021-01-06 16:00:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\131.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/26/15/thumbnail_26154e5c4c8207c3e2ce0c1223a5ebf5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\131'}
+2021-01-06 16:00:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/54/fa/thumbnail_54fa6ed6037e733aebadec3003388ddd.jpg> (referer: None)
+2021-01-06 16:00:56 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/54/fa/thumbnail_54fa6ed6037e733aebadec3003388ddd.jpg> referred in <None>
+2021-01-06 16:00:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\132.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/54/fa/thumbnail_54fa6ed6037e733aebadec3003388ddd.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\132'}
+2021-01-06 16:00:56 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:00:56 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/51/45/thumbnail_5145aeefbb7f1fb05d8f259807e858cc.jpg> (referer: None)
+2021-01-06 16:00:59 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/51/45/thumbnail_5145aeefbb7f1fb05d8f259807e858cc.jpg> referred in <None>
+2021-01-06 16:00:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\133.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/51/45/thumbnail_5145aeefbb7f1fb05d8f259807e858cc.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\133'}
+2021-01-06 16:01:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/df/b3/thumbnail_dfb34ea250bd3b09524fbe487b3f60d5.jpg> (referer: None)
+2021-01-06 16:01:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/df/b3/thumbnail_dfb34ea250bd3b09524fbe487b3f60d5.jpg> referred in <None>
+2021-01-06 16:01:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\134.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/df/b3/thumbnail_dfb34ea250bd3b09524fbe487b3f60d5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\134'}
+2021-01-06 16:01:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/9a/ea/thumbnail_9aeaf1534d4ffeb8ab06ec4d0411377c.jpg> (referer: None)
+2021-01-06 16:01:13 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/9a/ea/thumbnail_9aeaf1534d4ffeb8ab06ec4d0411377c.jpg> referred in <None>
+2021-01-06 16:01:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\135.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/9a/ea/thumbnail_9aeaf1534d4ffeb8ab06ec4d0411377c.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\135'}
+2021-01-06 16:01:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/89/b2/thumbnail_89b2639b9cd707ba7e7108958fc4af4a.jpg> (referer: None)
+2021-01-06 16:01:19 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/89/b2/thumbnail_89b2639b9cd707ba7e7108958fc4af4a.jpg> referred in <None>
+2021-01-06 16:01:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\136.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/89/b2/thumbnail_89b2639b9cd707ba7e7108958fc4af4a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\136'}
+2021-01-06 16:01:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f3/76/thumbnail_f3767c0452b3d59f227d93303cb8c11b.jpg> (referer: None)
+2021-01-06 16:01:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f3/76/thumbnail_f3767c0452b3d59f227d93303cb8c11b.jpg> referred in <None>
+2021-01-06 16:01:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\137.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f3/76/thumbnail_f3767c0452b3d59f227d93303cb8c11b.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\137'}
+2021-01-06 16:01:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/82/e8/thumbnail_82e8f13147d1b0c36952f6da11dc3927.jpg> (referer: None)
+2021-01-06 16:01:34 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/82/e8/thumbnail_82e8f13147d1b0c36952f6da11dc3927.jpg> referred in <None>
+2021-01-06 16:01:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\138.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/82/e8/thumbnail_82e8f13147d1b0c36952f6da11dc3927.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\138'}
+2021-01-06 16:01:34 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:01:34 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:01:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f3/ee/thumbnail_f3ee4852033b6b01f44f2c1d7bfe36d5.jpg> (referer: None)
+2021-01-06 16:01:39 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f3/ee/thumbnail_f3ee4852033b6b01f44f2c1d7bfe36d5.jpg> referred in <None>
+2021-01-06 16:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\139.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f3/ee/thumbnail_f3ee4852033b6b01f44f2c1d7bfe36d5.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\139'}
+2021-01-06 16:01:42 [scrapy.extensions.logstats] INFO: Crawled 142 pages (at 9 pages/min), scraped 139 items (at 9 items/min)
+2021-01-06 16:01:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ce/f7/thumbnail_cef73b1112212d4b4b595a9ee2069f0a.jpg> (referer: None)
+2021-01-06 16:01:46 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ce/f7/thumbnail_cef73b1112212d4b4b595a9ee2069f0a.jpg> referred in <None>
+2021-01-06 16:01:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\140.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ce/f7/thumbnail_cef73b1112212d4b4b595a9ee2069f0a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\140'}
+2021-01-06 16:01:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/63/1f/thumbnail_631f22115c173f8e3c8fb78e6ad2bc80.jpg> (referer: None)
+2021-01-06 16:01:54 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/63/1f/thumbnail_631f22115c173f8e3c8fb78e6ad2bc80.jpg> referred in <None>
+2021-01-06 16:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\141.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/63/1f/thumbnail_631f22115c173f8e3c8fb78e6ad2bc80.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\141'}
+2021-01-06 16:02:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/71/f2/thumbnail_71f2db6e1f96b92b5cc90fda4db28bca.jpg> (referer: None)
+2021-01-06 16:02:00 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/71/f2/thumbnail_71f2db6e1f96b92b5cc90fda4db28bca.jpg> referred in <None>
+2021-01-06 16:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\142.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/71/f2/thumbnail_71f2db6e1f96b92b5cc90fda4db28bca.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\142'}
+2021-01-06 16:02:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/de/c8/thumbnail_dec8e0caac0b6ff10d5acd3dd2f4181a.jpg> (referer: None)
+2021-01-06 16:02:08 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/de/c8/thumbnail_dec8e0caac0b6ff10d5acd3dd2f4181a.jpg> referred in <None>
+2021-01-06 16:02:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\143.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/de/c8/thumbnail_dec8e0caac0b6ff10d5acd3dd2f4181a.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\143'}
+2021-01-06 16:02:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/ca/80/thumbnail_ca803fa24a7aec7378f5c625ebd5c4f7.jpg> (referer: None)
+2021-01-06 16:02:14 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/ca/80/thumbnail_ca803fa24a7aec7378f5c625ebd5c4f7.jpg> referred in <None>
+2021-01-06 16:02:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\144.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/ca/80/thumbnail_ca803fa24a7aec7378f5c625ebd5c4f7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\144'}
+2021-01-06 16:02:14 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:02:14 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:02:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/6c/b6/thumbnail_6cb650dc215fd6cb22ceb8953ad5fefe.jpg> (referer: None)
+2021-01-06 16:02:21 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/6c/b6/thumbnail_6cb650dc215fd6cb22ceb8953ad5fefe.jpg> referred in <None>
+2021-01-06 16:02:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\145.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/6c/b6/thumbnail_6cb650dc215fd6cb22ceb8953ad5fefe.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\145'}
+2021-01-06 16:02:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/f0/9b/thumbnail_f09b637b074e0acbad060c2407a750b6.jpg> (referer: None)
+2021-01-06 16:02:26 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/f0/9b/thumbnail_f09b637b074e0acbad060c2407a750b6.jpg> referred in <None>
+2021-01-06 16:02:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\146.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/f0/9b/thumbnail_f09b637b074e0acbad060c2407a750b6.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\146'}
+2021-01-06 16:02:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/a5/11/thumbnail_a511f24d4ccac93e22143bdefd944b64.jpg> (referer: None)
+2021-01-06 16:02:32 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/a5/11/thumbnail_a511f24d4ccac93e22143bdefd944b64.jpg> referred in <None>
+2021-01-06 16:02:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\147.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/a5/11/thumbnail_a511f24d4ccac93e22143bdefd944b64.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\147'}
+2021-01-06 16:02:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/64/36/thumbnail_64369873872a4434f9d593ce31e112d7.jpg> (referer: None)
+2021-01-06 16:02:37 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/64/36/thumbnail_64369873872a4434f9d593ce31e112d7.jpg> referred in <None>
+2021-01-06 16:02:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\148.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/64/36/thumbnail_64369873872a4434f9d593ce31e112d7.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\148'}
+2021-01-06 16:02:42 [scrapy.extensions.logstats] INFO: Crawled 151 pages (at 9 pages/min), scraped 148 items (at 9 items/min)
+2021-01-06 16:02:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/54/1d/thumbnail_541d32adda34bc128f88db66cbe8cba3.jpg> (referer: None)
+2021-01-06 16:02:43 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/54/1d/thumbnail_541d32adda34bc128f88db66cbe8cba3.jpg> referred in <None>
+2021-01-06 16:02:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\149.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/54/1d/thumbnail_541d32adda34bc128f88db66cbe8cba3.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\149'}
+2021-01-06 16:02:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/a7/c8/thumbnail_a7c8b48263fd9dd7a70e4231a872f2ad.jpg> (referer: None)
+2021-01-06 16:02:48 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/a7/c8/thumbnail_a7c8b48263fd9dd7a70e4231a872f2ad.jpg> referred in <None>
+2021-01-06 16:02:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\150.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/a7/c8/thumbnail_a7c8b48263fd9dd7a70e4231a872f2ad.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\150'}
+2021-01-06 16:02:48 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:02:48 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:02:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5c/19/thumbnail_5c19e3e38bbe80e1e0becb6e9336dcaf.jpg> (referer: None)
+2021-01-06 16:02:53 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5c/19/thumbnail_5c19e3e38bbe80e1e0becb6e9336dcaf.jpg> referred in <None>
+2021-01-06 16:02:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\151.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5c/19/thumbnail_5c19e3e38bbe80e1e0becb6e9336dcaf.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\151'}
+2021-01-06 16:03:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/45/88/thumbnail_4588a4c3fe0c274b5d8e418d35506261.jpg> (referer: None)
+2021-01-06 16:03:01 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/45/88/thumbnail_4588a4c3fe0c274b5d8e418d35506261.jpg> referred in <None>
+2021-01-06 16:03:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\152.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/45/88/thumbnail_4588a4c3fe0c274b5d8e418d35506261.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\152'}
+2021-01-06 16:03:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/b1/4e/thumbnail_b14e458bb4ffa2f8e70674b48773c7c8.jpg> (referer: None)
+2021-01-06 16:03:07 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/b1/4e/thumbnail_b14e458bb4ffa2f8e70674b48773c7c8.jpg> referred in <None>
+2021-01-06 16:03:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\153.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/b1/4e/thumbnail_b14e458bb4ffa2f8e70674b48773c7c8.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\153'}
+2021-01-06 16:03:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5d/b2/thumbnail_5db291ba00cd2c91303bd62481726e0e.jpg> (referer: None)
+2021-01-06 16:03:15 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5d/b2/thumbnail_5db291ba00cd2c91303bd62481726e0e.jpg> referred in <None>
+2021-01-06 16:03:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\154.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5d/b2/thumbnail_5db291ba00cd2c91303bd62481726e0e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\154'}
+2021-01-06 16:03:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/31/85/thumbnail_3185cc125b08ef0856ed6efe93141850.jpg> (referer: None)
+2021-01-06 16:03:24 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/31/85/thumbnail_3185cc125b08ef0856ed6efe93141850.jpg> referred in <None>
+2021-01-06 16:03:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\155.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/31/85/thumbnail_3185cc125b08ef0856ed6efe93141850.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\155'}
+2021-01-06 16:03:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/a1/72/thumbnail_a172ab876ad2dd386469448b10cb5945.jpg> (referer: None)
+2021-01-06 16:03:27 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/a1/72/thumbnail_a172ab876ad2dd386469448b10cb5945.jpg> referred in <None>
+2021-01-06 16:03:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\156.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/a1/72/thumbnail_a172ab876ad2dd386469448b10cb5945.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\156'}
+2021-01-06 16:03:27 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:03:27 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:03:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/bb/ae/thumbnail_bbae90f7cbc777140aa983cd6520259f.jpg> (referer: None)
+2021-01-06 16:03:41 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/bb/ae/thumbnail_bbae90f7cbc777140aa983cd6520259f.jpg> referred in <None>
+2021-01-06 16:03:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\157.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/bb/ae/thumbnail_bbae90f7cbc777140aa983cd6520259f.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\157'}
+2021-01-06 16:03:42 [scrapy.extensions.logstats] INFO: Crawled 160 pages (at 9 pages/min), scraped 157 items (at 9 items/min)
+2021-01-06 16:03:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/7f/68/thumbnail_7f687f536a018fb7adab2cb09978fa02.jpg> (referer: None)
+2021-01-06 16:03:43 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/7f/68/thumbnail_7f687f536a018fb7adab2cb09978fa02.jpg> referred in <None>
+2021-01-06 16:03:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\158.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/7f/68/thumbnail_7f687f536a018fb7adab2cb09978fa02.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\158'}
+2021-01-06 16:03:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/0c/cd/thumbnail_0ccd099d6e354d66aa9bb6b81c50fc3d.jpg> (referer: None)
+2021-01-06 16:03:50 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/0c/cd/thumbnail_0ccd099d6e354d66aa9bb6b81c50fc3d.jpg> referred in <None>
+2021-01-06 16:03:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\159.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/0c/cd/thumbnail_0ccd099d6e354d66aa9bb6b81c50fc3d.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\159'}
+2021-01-06 16:03:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/6c/ac/thumbnail_6cac1e248a8badcf21ca658a03c9cfba.jpg> (referer: None)
+2021-01-06 16:03:57 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/6c/ac/thumbnail_6cac1e248a8badcf21ca658a03c9cfba.jpg> referred in <None>
+2021-01-06 16:03:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\160.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/6c/ac/thumbnail_6cac1e248a8badcf21ca658a03c9cfba.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\160'}
+2021-01-06 16:04:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/d3/d5/thumbnail_d3d506e20001f22ba51460661d31a499.jpg> (referer: None)
+2021-01-06 16:04:01 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/d3/d5/thumbnail_d3d506e20001f22ba51460661d31a499.jpg> referred in <None>
+2021-01-06 16:04:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\161.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/d3/d5/thumbnail_d3d506e20001f22ba51460661d31a499.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\161'}
+2021-01-06 16:04:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/46/9a/thumbnail_469a8fb334b870e341965759a61cf10e.jpg> (referer: None)
+2021-01-06 16:04:09 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/46/9a/thumbnail_469a8fb334b870e341965759a61cf10e.jpg> referred in <None>
+2021-01-06 16:04:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\162.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/46/9a/thumbnail_469a8fb334b870e341965759a61cf10e.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\162'}
+2021-01-06 16:04:09 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:04:09 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:04:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/5f/1a/thumbnail_5f1a631031f78c057ae2ac2392a85f96.jpg> (referer: None)
+2021-01-06 16:04:17 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/5f/1a/thumbnail_5f1a631031f78c057ae2ac2392a85f96.jpg> referred in <None>
+2021-01-06 16:04:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\163.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/5f/1a/thumbnail_5f1a631031f78c057ae2ac2392a85f96.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\163'}
+2021-01-06 16:04:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/2a/aa/thumbnail_2aaa3d52a40d9115984abab39220b957.jpg> (referer: None)
+2021-01-06 16:04:20 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/2a/aa/thumbnail_2aaa3d52a40d9115984abab39220b957.jpg> referred in <None>
+2021-01-06 16:04:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\164.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/2a/aa/thumbnail_2aaa3d52a40d9115984abab39220b957.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\164'}
+2021-01-06 16:04:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/fc/d8/thumbnail_fcd876c7f5af689e0e4399e4e3caecfc.jpg> (referer: None)
+2021-01-06 16:04:25 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/fc/d8/thumbnail_fcd876c7f5af689e0e4399e4e3caecfc.jpg> referred in <None>
+2021-01-06 16:04:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\165.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/fc/d8/thumbnail_fcd876c7f5af689e0e4399e4e3caecfc.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\165'}
+2021-01-06 16:04:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/e4/f8/thumbnail_e4f8aa86938e8929c63ee9760c570fce.jpg> (referer: None)
+2021-01-06 16:04:33 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/e4/f8/thumbnail_e4f8aa86938e8929c63ee9760c570fce.jpg> referred in <None>
+2021-01-06 16:04:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\166.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/e4/f8/thumbnail_e4f8aa86938e8929c63ee9760c570fce.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\166'}
+2021-01-06 16:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/78/af/thumbnail_78afa02f3e7e787f868aa0271f9b1921.jpg> (referer: None)
+2021-01-06 16:04:38 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/78/af/thumbnail_78afa02f3e7e787f868aa0271f9b1921.jpg> referred in <None>
+2021-01-06 16:04:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\167.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/78/af/thumbnail_78afa02f3e7e787f868aa0271f9b1921.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\167'}
+2021-01-06 16:04:42 [scrapy.extensions.logstats] INFO: Crawled 170 pages (at 10 pages/min), scraped 167 items (at 10 items/min)
+2021-01-06 16:04:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/22/9e/thumbnail_229e0a4deac73809dd6fe693223f76f1.jpg> (referer: None)
+2021-01-06 16:04:45 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/22/9e/thumbnail_229e0a4deac73809dd6fe693223f76f1.jpg> referred in <None>
+2021-01-06 16:04:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\168.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/22/9e/thumbnail_229e0a4deac73809dd6fe693223f76f1.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\168'}
+2021-01-06 16:04:45 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-06 16:04:45 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\onelor\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\onelor\Documents\code\myscrapy\myscrapy\pipelines.py", line 53, in _handle_error
+    print(failue)
+OSError: [Errno 22] Invalid argument
+2021-01-06 16:04:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/4a/42/thumbnail_4a42c8f52186c493ea5fd9f04955ae70.jpg> (referer: None)
+2021-01-06 16:04:51 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/4a/42/thumbnail_4a42c8f52186c493ea5fd9f04955ae70.jpg> referred in <None>
+2021-01-06 16:04:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\169.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/4a/42/thumbnail_4a42c8f52186c493ea5fd9f04955ae70.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\169'}
+2021-01-06 16:04:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://thumbs.thedoujin.com/thumbnails/78/62/thumbnail_7862f0df7fd28a54ed71fb0384e06b44.jpg> (referer: None)
+2021-01-06 16:04:58 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://thumbs.thedoujin.com/thumbnails/78/62/thumbnail_7862f0df7fd28a54ed71fb0384e06b44.jpg> referred in <None>
+2021-01-06 16:04:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://thedoujin.com/index.php/categories/598>
+{'image_paths': ['bookthumb\\[]\\598 Kyonyuu no Ran\\170.jpg'],
+ 'image_urls': ['https://thumbs.thedoujin.com/thumbnails/78/62/thumbnail_7862f0df7fd28a54ed71fb0384e06b44.jpg'],
+ 'imgpath': 'bookthumb\\[]\\598 Kyonyuu no Ran\\170'}
+2021-01-06 16:04:58 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-01-06 16:04:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 101896,
+ 'downloader/request_count': 175,
+ 'downloader/request_method_count/GET': 175,
+ 'downloader/response_bytes': 6058854,
+ 'downloader/response_count': 175,
+ 'downloader/response_status_count/200': 173,
+ 'downloader/response_status_count/301': 2,
+ 'file_count': 170,
+ 'file_status_count/downloaded': 170,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 1, 6, 8, 4, 58, 280530),
+ 'item_scraped_count': 170,
+ 'log_count/CRITICAL': 56,
+ 'log_count/DEBUG': 515,
+ 'log_count/INFO': 27,
+ 'response_received_count': 173,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 2,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2021, 1, 6, 7, 46, 42, 701402)}
+2021-01-06 16:04:58 [scrapy.core.engine] INFO: Spider closed (finished)

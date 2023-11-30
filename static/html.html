@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>no title</title>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+<style>
+  #app
+  {
+    display: flex;
+    flex-wrap: wrap;
+    /* 没有wrap会全塞进一行里,有了也会被压缩 */
+    /* justify-content: flex-start; */
+  }
+  .col {
+    flex: 20%;
+    max-width: 20%;
+    vertical-align: top;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div v-for="(path,index) in paths" class="col">
+    <img width="100%" :id="index" :src="path" :title="title(index)" @click="点击($event)">
+    <!-- 点击(),点击($event)结果不一样.单一个 点击 似乎不起作用 -->
+    <!-- 图片的width属性是相对于父节点的百分比 -->
+    </img>
+    <!-- path已经被urlencode了 -->
+    <!-- <div>{{path}}</div> -->
+  </div>
+</div>
+<script src="static/vue1.js"></script>
+<!-- 这里的路径是html的相对路径 -->
+</body>
+</html>
+<!-- 
+  keyCode 8 = BackSpace BackSpace
+  keyCode 9 = Tab Tab
+  keyCode 12 = Clear
+  keyCode 13 = Enter
+  keyCode 16 = Shift_L
+  keyCode 17 = Control_L
+keyCode 18 = Alt_L
+keyCode 19 = Pause
+keyCode 20 = Caps_Lock
+keyCode 27 = Escape Escape
+keyCode 32 = space
+keyCode 33 = Prior
+keyCode 34 = Next
+keyCode 35 = End
+keyCode 36 = Home
+keyCode 37 = Left
+keyCode 38 = Up
+keyCode 39 = Right
+keyCode 40 = Down
+keyCode 41 = Select
+keyCode 42 = Print
+keyCode 43 = Execute
+keyCode 45 = Insert
+keyCode 46 = Delete
+keyCode 47 = Help
+keyCode 65 = a A
+keyCode 66 = b B
+keyCode 67 = c C
+keyCode 68 = d D
+keyCode 69 = e E EuroSign
+keyCode 70 = f F
+keyCode 71 = g G
+keyCode 72 = h H
+keyCode 73 = i I
+keyCode 74 = j J
+keyCode 75 = k K
+keyCode 76 = l L
+keyCode 77 = m M mu
+keyCode 78 = n N
+keyCode 79 = o O
+keyCode 80 = p P
+keyCode 81 = q Q at
+keyCode 82 = r R
+keyCode 83 = s S
+keyCode 84 = t T
+keyCode 85 = u U
+keyCode 86 = v V
+keyCode 87 = w W
+keyCode 88 = x X
+keyCode 89 = y Y
+keyCode 90 = z Z -->

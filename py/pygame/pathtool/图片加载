@@ -1,0 +1,42 @@
+import tkinter as tk
+from PIL import ImageTk, Image
+from dirtool import *
+if __name__ == '__main__':
+    本子目录='C:\\Users\\onelor\\game\\hugebreast\\[HG茶川] おっぱいマイスタ'
+    图片列表=getsubdir(本子目录)
+    当前号码=0
+    filename1 = 图片列表[当前号码]
+    filename2 = 图片列表[当前号码+1]
+    
+    
+    def func(event):
+        global 当前号码
+        当前号码+=1
+        print(当前号码)
+        filename1 = 图片列表[当前号码]
+        img1 = ImageTk.PhotoImage(Image.open(filename1))
+        canvas1.create_image((500,800),image = img1)
+        canvas1.pack()
+        filename2 = 图片列表[当前号码+1]
+        img2 = ImageTk.PhotoImage(Image.open(filename2).resize((500, 800),Image.ANTIALIAS)) n
+        label2.setimg(image = img2)
+        label2.pack()
+    
+    window = tk.Tk()
+    img1 = ImageTk.PhotoImage(Image.open(filename1).resize((600, 800),Image.ANTIALIAS))
+    img2 = ImageTk.PhotoImage(Image.open(filename2).resize((600, 800),Image.ANTIALIAS))
+    #photoimage不可以直接打开jpg!!!   
+    frame_l = tk.Frame(window) 
+    frame_r = tk.Frame(window) 
+    frame_l.pack(side='left') 
+    frame_r.pack(side='right')
+    canvas1 = tk.Canvas(frame_l, height=800, width=600)
+    canvas1.create_image(0, 0,image=img1)
+    canvas1.pack()
+    label2 = tk.Label(frame_r,text='学习python', justify='left',image=img2,compound='center',font=('微软雅黑',20),fg='white')
+    label2.focus_set()
+    label2.pack()
+    
+    label2.bind("<Key>",func)
+    
+    window.mainloop()

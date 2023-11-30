@@ -1,0 +1,42 @@
+esphome:
+  name: sanjinesp32
+
+esp32:
+  board: wemos_d1_mini32
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "wanluo3jin"
+
+ota:
+  password: "wanluo3jin"
+
+wifi:
+  ssid: "Redmi"
+  password: "998765432"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Sanjinesp32 Fallback Hotspot"
+    password: "wsKhwOLX7SOG"
+
+switch:
+  - platform: gpio
+    name: "Living Room Dehumidifier"
+    pin: 5
+
+binary_sensor:
+  - platform: gpio
+    name: "Living Room Window"
+    pin:
+      number: 15
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+captive_portal:

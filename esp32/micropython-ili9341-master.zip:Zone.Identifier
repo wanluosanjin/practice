@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/rdagger/micropython-ili9341
+HostUrl=https://codeload.github.com/rdagger/micropython-ili9341/zip/refs/heads/master
