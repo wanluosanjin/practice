@@ -1,3 +1,20 @@
+def lss path
+    Dir.entries path
+end
+#autoload
+#def A.a  def self.a 效果不同,后者无法接受示例对象,只能A调用
+
+#    [6..n,123]
+class A
+    class <<A 
+        def a  
+            p a
+        end
+    end
+    def aa
+        p aa 
+    end
+end 
 class AAA
     def aaa()
         puts"aaaaaa"  "bbbbb"

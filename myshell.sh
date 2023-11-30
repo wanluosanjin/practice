@@ -11,6 +11,10 @@ killalli(){
 	killall -i -I $1
 }
 
+lsbin(){
+	for aaa in `ls bin` ;do echo $aaa; read a;if [[ $a ]];then  whereis $aaa;fi; done;
+}
+
 killjobs(){
 	jobs -p | xargs kill
 }
