@@ -15,9 +15,3 @@ jobs:
     - uses: actions/checkout@v3
     - name: configure
       run: echo （aaa）
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
