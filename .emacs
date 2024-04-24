@@ -83,7 +83,7 @@
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 (define-key ivy-minibuffer-map (kbd "<C-up>") 'ivy-previous-history-element)
 
-
+//不能用,启动时打开.emacs其他mode不启动???
 (define-minor-mode normal-mode
   "normal mode."
   :keymap (make-sparse-keymap))
