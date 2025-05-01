@@ -1,3 +1,4 @@
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -42,16 +43,13 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(global-undo-tree-mode)
 
 ;(set-frame-height (selected-frame) 40)
 
-(global-undo-tree-mode)
-(define-prefix-command 'my-prefix)
-(global-set-key (kbd "<menu>") 'my-prefix)
-(define-key my-prefix (kbd "n") 'myel-copy-to-next)
+
 (global-set-key (kbd "C-`") 'delete-other-windows)
-(global-set-key (kbd "C-x x") 'switch-to-next-buffer)
-(global-set-key (kbd "C-x C-x") 'switch-to-prev-buffer)
+(global-set-key (kbd "C-x C-x") 'clipboard-kill-region)
 (global-set-key (kbd "C-q") 'kill-buffer-and-window)
 (global-set-key (kbd "C-o") 'other-window)
 (global-set-key (kbd "<M-left>") 'previous-buffer)
@@ -63,6 +61,8 @@
 (global-set-key (kbd "C-z") 'undo-tree-undo)
 (global-set-key (kbd "M-z") 'undo-tree-redo)
 (global-set-key (kbd "C-v") 'clipboard-yank)
+(global-set-key (kbd "C-;") 'end-of-buffer)
+(global-set-key (kbd "C-:") 'beginning-of-buffer)
 
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-x C-r") 'ivy-resume)
@@ -83,30 +83,94 @@
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 (define-key ivy-minibuffer-map (kbd "<C-up>") 'ivy-previous-history-element)
 
-//不能用这名字???
-(define-minor-mode normal-mode
-  "normal mode."
+
+;;change cursor style
+(define-minor-mode femacs-mode
+  "femacs-mode."
+  :global t
   :keymap (make-sparse-keymap))
+(femacs-mode nil)
 
-;;(global-set-key (kbd "<escape>") 'normal-mode)
-(define-prefix-command 'my-prefix)
-(define-key normal-mode-map (kbd "<SPC>") 'my-prefix)
-(define-key normal-mode-map (kbd "SPC SPC") 'counsel-M-x)
-(define-key normal-mode-map (kbd "<escape>") 'counsel-M-x)
-(define-key normal-mode-map (kbd "i") 'self-insert-command)
-(define-key normal-mode-map (kbd "o") 'self-insert-command)
-(define-key normal-mode-map (kbd "p") 'self-insert-command)
-(define-key normal-mode-map (kbd "h") 'self-insert-command)
-(define-key normal-mode-map (kbd "j") 'self-insert-command)
-(define-key normal-mode-map (kbd "k") 'self-insert-command)
-(define-key normal-mode-map (kbd "l") 'self-insert-command)
-(define-key normal-mode-map (kbd "h") 'self-insert-command)
-;; (global-set-key (kbd "i") '(lambda ()
-;;         (interactive)
-;;         (set-mark)))
+(global-set-key (kbd "C-SPC") 'femacs-mode)
+(define-key femacs-mode-map (kbd "u") 'previous-buffer)
+(define-key femacs-mode-map (kbd "p") 'next-buffer)
+(define-key femacs-mode-map (kbd "h") 'left-word)
+(define-key femacs-mode-map (kbd "j") 'next-line)
+(define-key femacs-mode-map (kbd "k") 'previous-line)
+(define-key femacs-mode-map (kbd "l") 'right-word)
+(define-key femacs-mode-map (kbd "v") 'scroll-up-command)
+(define-key femacs-mode-map (kbd "b") 'scroll-down-command)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 
+(define-prefix-command 'femacs-prefix)
+(global-set-key (kbd "<menu>") 'femacs-prefix)
+(define-key femacs-prefix (kbd "n") 'myel-copy-to-next)
+(define-key femacs-prefix (kbd "<menu>") 'femacs-mode)
 
+(define-prefix-command 'femacs-space-prefix)
+(define-key femacs-mode-map (kbd "<SPC>") 'femacs-space-prefix)
+(define-key femacs-mode-map (kbd "SPC SPC") 'counsel-M-x)
+
+
+(define-prefix-command 'femacs-o-prefix)
+(define-key femacs-mode-map (kbd "o") 'femacs-o-prefix)
+(define-key femacs-mode-map (kbd "o i") 'femacs-mode)
+
+(setq femacs-mode-before-minibuffer femacs-mode)
+(defun femacs-minibuffer-setup ()
+  "Cancel femacsmode."
+  (setq femacs-mode-before-minibuffer femacs-mode)
+  (if femacs-mode
+      (femacs-mode 0)
+      nil))
+;;(call-interactively 'femacs-mode t (vector 1)) no need to use
+(defun femacs-minibuffer-exit ()
+  "Recover femacsmode."
+  (femacs-mode (if femacs-mode-before-minibuffer 1 0)))
+(add-hook 'minibuffer-setup-hook #'femacs-minibuffer-setup 'local)
+
+(add-hook 'minibuffer-exit-hook #'femacs-minibuffer-exit 'local)
+
+(defun femacs-mode-esc ()
+  "Esc to femacsmode."
+  (interactive)
+  (if femacs-mode
+      (keyboard-escape-quit)
+    (call-interactively 'femacs-mode)))
+
+(defun mark-whole-sexp ()
+  (interactive)
+  (let ((bound (bounds-of-thing-at-point 'sexp)))
+    (if bound
+        (progn
+          (goto-char (car bound))
+          (set-mark (point))
+          (goto-char (cdr bound)))
+      (message "No sexp found at point!"))))
+
+(define-prefix-command 'femacs-i-prefix)
+(define-key femacs-mode-map (kbd "i") 'femacs-i-prefix)
+(define-key femacs-i-prefix (kbd "i") 'mark-whole-sexp)
+
+
+
+;; (defmacro once-only ((&rest names) &body body)
+;;      (let ((gensyms (loop for n in names collect (gensym))))
+;;        `(let (,@(loop for g in gensyms collect `(,g (gensym))))
+;;          `(let (,,@(loop for g in gensyms for n in names collect ``(,,g ,,n)))
+;;            ,(let (,@(loop for n in names for g in gensyms collect `(,n ,g)))
+;;               ,@body)))))
+
+;; (defmacro square (x)
+;;   (once-only (x)
+;;     `(* ,x ,x)))
+;; https://oneforalone.github.io/lol-zh/chapter03.html
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package projectile
   :ensure t
@@ -217,30 +281,3 @@
 ;;需要按一次cmi tab的自动补全才启动
 ;;(add-hook 'after-init-hook 'global-company-mode)
 
-;C-@		set-mark-command
-;C-a		move-beginning-of-line
-;C-b		backward-char
-;C-c		mode-specific-command-prefix
-;C-d		delete-char
-;C-e		move-end-of-line
-;C-f		forward-char
-;C-g		keyboard-quit
-;C-h		help-command
-;TAB		indent-for-tab-command
-;C-j		electric-newline-and-maybe-indent
-;C-k		kill-line
-;C-l		recenter-top-bottom
-;RET		newline
-;C-n		next-line
-;C-o		open-line
-;C-p		previous-line
-;C-q		quoted-insert
-;C-r		isearch-backward
-;C-s		isearch-forward
-;C-t		transpose-chars
-;C-u		universal-argument
-;C-v		scroll-up-command
-;C-w		kill-region
-;C-x		Control-X-prefix
-;C-y		yank
-;C-z		suspend-frame
